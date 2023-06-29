@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1">
+    <title>Kitchen Price</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <script src="script.js"></script>
+    
+    <main>
+        
+        <h2 class="page-titles">ПРОЕКТНАЯ КУХНЯ</h2>
+        
+        <p><button onclick="window.location.href='index.html'" class="fontstyle-2">главная</button></p>
+        
+        <h2 class="table-headers">ОСНОВНАЯ УСЛУГА</h2>
+
+        <table>
+
+            <thead>
+                <tr><th>Наименование услуги</th><th>Кол</th><th>Сумма</th></tr>
+            </thead>
+
+            <tbody>
+
+                <form name="calc_1">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Сборка каркасов кухни,
+                            <br>навеска и стяжка верхних и нижних корпусов,
+                            <br>установка столешницы ДСП, плинтуса, цоколя, фальшпанели,
+                            <br>навеска и регулировка дверей.
+                            <br>
+                            <br>Установка и подключение
+                            <br>ЭЛЕКТРИЧЕСКОЙ ВАРОЧНОЙ ПАНЕЛИ<br>или<br>ЭЛЕКТРОПЛИТЫ<br>или<br>ДУХОВОГО ШКАФА
+                            <br>на готовые коммуникации.
+                            <br>
+                            <br>Установка и подключение
+                            <br>МОЙКИ без наращивания шлангов, СМЕСИТЕЛЯ без доработок.
+                            <br>
+                            <br>Установка ВЫТЯЖКИ без переделки каркаса.
+                            <br>Подключение в режиме рециркуляции.
+                            <br>
+                            <br>Установка встроенной СВЧ без подпила фасада.
+                            <br>
+                            <br>Установка сушки и выдвижных корзин.
+                            <br>
+                            <br>Установка рейлинга в стеновую панель ДСП.
+                            <br>
+                            <br>Распил СТОЛЕШНИЦЫ или СТЕНОВОЙ ПАНЕЛИ ДСП (2 пила включены в стоимость).
+                            <br>
+                            <br>Вырез отверстия под ВАРОЧНУЮ ПАНЕЛЬ и МОЙКУ.
+                            <br>
+                            <br>Вырез отверстия под СМЕСИТЕЛЬ в МОЙКЕ (металл или фрагранит), в столешнице ДСП.
+                            <br>
+                            <br>Вырез под трубы (2 выреза включены в стоимость).
+                            <br>
+                            <br>Монтаж ручек и ножек.
+                            <br>
+                            <br>Упаковка мусора (без выноса из помещения заказчика).
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_1.input_1.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 2500">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_1.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_1.input_1.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 2500">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_1" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+            </tbody>
+            
+        </table>
+        
+        <h2 class="table-headers">ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ</h2>
+        
+        <p class="text-h1">ПРИ ПОКУПКИ ТОВАРОВ В<br>ЛЕРУА МЕРЛЕН</p>
+
+
+        <table>
+
+            <tbody>
+
+                <thead>
+                    <tr>
+                        <th>Наименование услуги</th><th>Кол</th><th>Сумма</th>
+                    </tr>
+                </thead>
+
+                <form name="calc_2">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез технический под трубы.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_2.input_2.value = (--amount.value, calc_2.input_2.value - 100)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_2.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_2.input_2.value = (++amount.value * 100)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_2" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_3">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез под розетки, светильники.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_3.input_3.value = (--amount.value, calc_3.input_3.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_3.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_3.input_3.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_3" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_4">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Уменьшение глубины или высоты шкафа.
+                            <br>Запил шкафов или фасадов или фальшпанелей.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_4.input_4.value = (--amount.value, calc_4.input_4.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_4.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_4.input_4.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_4" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_5">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Распил столешницы или стеновой панели.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_5.input_5.value = (--amount.value, calc_5.input_5.value - 150)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_5.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_5.input_5.value = (++amount.value * 150)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_5" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_6">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Демонтаж и установка розетки на кухне.
+                            <br>После проведения монтажа стеновой панели.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_6.input_6.value = (--amount.value, calc_6.input_6.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_6.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_6.input_6.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_6" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_7">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка и подключение розетки на кухне.
+                            <br>На готовые коммуникации.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_7.input_7.value = (--amount.value, calc_7.input_7.value - 250)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_7.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_7.input_7.value = (++amount.value * 250)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_7" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_8">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка механизма FREE-FOLD или FREE-FLAP.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_8.input_8.value = (--amount.value, calc_8.input_8.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_8.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_8.input_8.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_8" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_9">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка светодиодной ленты для кухни.
+                            <br>Подключение и монтаж светодиодной ленты с коробом для ленты.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_9.input_9.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 300">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_9.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_9.input_9.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_9" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_10">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Присадка под петлю.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_10.input_10.value = (--amount.value, calc_10.input_10.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_10.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_10.input_10.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_10" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_11">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка карниза (1 стык / 2 запила).
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_11.input_11.value = (--amount.value, calc_11.input_11.value - 250)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_11.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_11.input_11.value = (++amount.value * 250)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_11" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_12">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Навеска третьего уровня шкафов.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_12.input_12.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 500">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_12.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_12.input_12.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 500">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_12" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_13">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Переделка шкафа под встроенную вытяжку с выпилами под воздуховод.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_13.input_13.value = (--amount.value, calc_13.input_13.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_13.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_13.input_13.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_13" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_14">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Монтаж пластикового короба при подключении вытяжки.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_14.input_14.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 250">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_14.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_14.input_14.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 250">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_14" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_15">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Перенос стойки углового шкафа.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_15.input_15.value = (--amount.value, calc_15.input_15.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_15.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_15.input_15.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_15" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_16">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение мойки с сифоном.
+                            <br>Подключение сифона, мойки, слива, перелива.
+                            <br>Подключение до 0,8 метра гофротрубой к канализации.
+                            <br>Герметизация мойки.
+                            <br>Без доработки.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_16.input_16.value = (--amount.value, calc_16.input_16.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_16.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_16.input_16.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_16" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_17">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка гофротрубы сифона.
+                            <br>Длиной более 0,8м.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_17.input_17.value = (--amount.value, calc_17.input_17.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_17.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_17.input_17.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_17" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_18">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение светильника подсветки.
+                            <br>Если не входят в комплект, то приобретаются отдельно:
+                            <br>трансформатор, клеммы, провод, накладной выключатель.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_18.input_18.value = (--amount.value, calc_18.input_18.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_18.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_18.input_18.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_18" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_19">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение смесителя.
+                            <br>подключение входящей в комплект подводки с использованием переходников.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_19.input_19.value = (--amount.value, calc_19.input_19.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_19.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_19.input_19.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_19" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_20">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Навеска ведра.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_20.input_20.value = (--amount.value, calc_20.input_20.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_20.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_20.input_20.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_20" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_21">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подпил ножек.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_21.input_21.value = (--amount.value, calc_21.input_21.value - 40)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_21.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_21.input_21.value = (++amount.value * 40)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_21" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_22">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Скос столешницы ДСП и кромкование.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_22.input_22.value = (--amount.value, calc_22.input_22.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_22.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_22.input_22.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_22" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_23">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Монтаж подоконника из полотна столешницы.
+                            <br>С врезкой вентиляционных решеток (приобретается отдельно).
+                            <br>1 продольный пил включен в стоимость (ширина подоконника 1.2 м).
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_23.input_23.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 1000">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_23.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_23.input_23.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 1000">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_23" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_24">
+
+                    <tr>
+                        <td name="tab_1">
+                            Установка барной стойки-столешницы без закругления.
+                            <br>Установка опоры (ножек или подстолья).
+                            <br>Соединение со столешницей (если стойка не островная).
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_24.input_24.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 400).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_24.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_24.input_24.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 400).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_24" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_25">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Закругление столешницы ДСП и кромкование.
+                            <br>Закругление одного угла.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_25.input_25.value = (--amount.value, calc_25.input_25.value - 1000)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_25.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_25.input_25.value = (++amount.value * 1000)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_25" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_26">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Сверление отверстия в керамограните.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_26.input_26.value = (--amount.value, calc_26.input_26.value - 150)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_26.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_26.input_26.value = (++amount.value * 150)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_26" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_27">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка рейлинга в плитку или керамогранит.
+                            <br>2 крепления.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_27.input_27.value = (--amount.value, calc_27.input_27.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_27.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_27.input_27.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_27" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_28">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка полок на кронштейнах.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_28.input_28.value = (--amount.value, calc_28.input_28.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_28.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_28.input_28.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_28" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_29">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка полок со скрытым креплением.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_29.input_29.value = (--amount.value, calc_29.input_29.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_29.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_29.input_29.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_29" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_30">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка встраиваемой розетки в столешницу.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_30.input_30.value = (--amount.value, calc_30.input_30.value - 250)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_30.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_30.input_30.value = (++amount.value * 250)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_30" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_31">
+
+                    <tr>
+                        <td name="tab_1">
+                            Наращивание жесткого сливного шланга
+                            <br>при подключении ПОСУДОМОЕЧНОЙ МАШИНЫ
+                            <br>более 1,2м.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_31.input_31.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_31.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_31.input_31.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_31" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_32">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка кронштейнов для микроволновки.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_32.input_32.value = (--amount.value, calc_32.input_32.value - 100)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_32.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_32.input_32.value = (++amount.value * 100)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_32" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_33">
+
+                    <tr>
+                        <td name="tab_1">
+                            Прокладка воздуховодов гофрированным шлангом.
+                            <br>С креплением к стене или шкафу более 2,5м от места установки до точки подключения.
+                            <br>Герметизация соединений.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_33.input_33.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_33.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_33.input_33.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_33" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_34">
+
+                    <tr>
+                        <td name="tab_1">
+                            Установка менсолы.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_34.input_34.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_34.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_34.input_34.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_34" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+
+                
+
+                <form name="calc_35">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка отдельно приобретённой столешницы из ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_35.input_35.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 300">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_35.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_35.input_35.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_35" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_36">
+
+                    <tr>
+                        <td name="tab_1">
+                            Демонтаж столешницы из ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_36.input_36.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_36.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_36.input_36.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_36" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_37">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Монтаж плинтуса на столешницу, приобретенную отдельно от кухни.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_37.input_37.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 150">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_37.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_37.input_37.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 150">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_37" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_38">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Демонтаж плинтуса столешницы.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_38.input_38.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 100">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_38.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_38.input_38.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 100">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_38" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_39">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Торцовка столешницы, приобретенной отдельно от кухни.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_39.input_39.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 300">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_39.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_39.input_39.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_39" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_40">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез отверстия под варочную панель / мойку в столешнице МДФ, ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_40.input_40.value = (--amount.value, calc_40.input_40.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_40.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_40.input_40.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_40" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_41">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез под трубы / смеситель в столешнице МДФ, ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_41.input_41.value = (--amount.value, calc_41.input_41.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_41.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_41.input_41.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_41" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_42">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Скос столешницы МДФ, ДСП и кромкование.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_42.input_42.value = (--amount.value, calc_42.input_42.value - 800)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_42.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_42.input_42.value = (++amount.value * 800)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_42" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_43">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Замена столешницы.
+                            <br>Демонтаж старой, монтаж новой, вырез под варочную поверхность и мойку.
+                            <br>Только для товаров Леруа Мерлен.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_43.input_43.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 600">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_43.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_43.input_43.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 600">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_43" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_44">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка столешницы МДФ, ДСП.<br>НЕ ЛЕРУА МЕРЛЕН.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_44.input_44.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 500">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_44.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_44.input_44.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 500">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_44" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_45">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез отверстия под варочную панель / мойку в столешнице МДФ, ДСП.<br>НЕ ЛЕРУА МЕРЛЕН.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_45.input_45.value = (--amount.value, calc_45.input_45.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_45.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_45.input_45.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_45" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_46">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез под трубы / смеситель в столешнице МДФ, ДСП.<br>НЕ ЛЕРУА МЕРЛЕН.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_46.input_46.value = (--amount.value, calc_46.input_46.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_46.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_46.input_46.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_46" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_47">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Скос столешницы МДФ, ДСП и кромкование.<br>НЕ ЛЕРУА МЕРЛЕН.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_47.input_47.value = (--amount.value, calc_47.input_47.value - 1000)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_47.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_47.input_47.value = (++amount.value * 1000)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_47" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_48">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка стеновой панели МДФ, ДСП до уровня навесных шкафов.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_48.input_48.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 250">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_48.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_48.input_48.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 250">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_48" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_49">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Распил стеновой панели МДФ, ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_49.input_49.value = (--amount.value, calc_49.input_49.value - 150)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_49.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_49.input_49.value = (++amount.value * 150)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_49" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_50">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез под розетку / выключатель в стеновой панели МДФ, ДСП.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_50.input_50.value = (--amount.value, calc_50.input_50.value - 250)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_50.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_50.input_50.value = (++amount.value * 250)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_50" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_51">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка стеновая панели HPL до уровня навесных шкафов.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_51.input_51.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 300">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_51.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_51.input_51.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_51" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_52">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Распил стеновой панели HPL.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_52.input_52.value = (--amount.value, calc_52.input_52.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_52.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_52.input_52.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_52" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_53">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Вырез под розетку / выключатель в стеновой панеле HPL.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_53.input_53.value = (--amount.value, calc_53.input_53.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_53.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_53.input_53.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_53" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_54">
+
+                    <tr>
+
+                        <td name="tab_1">
+                            Демонтаж стеновой панели HPL.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_54.input_54.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 250">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_54.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_54.input_54.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 250">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_54" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_55">
+                    <tr>
+                        <td name="tab_1">
+                            Установка стеклянной стеновой панели до уровня навесных шкафов.
+                        </td>
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_55.input_55.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 300">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_55.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_55.input_55.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
+                        </td>
+                        <td name="tab_3">
+                            <input type="text" name="input_55" value=" " size="7">
+                        </td>
+                    </tr>
+                </form>
+
+                <thead><tr><th colspan="3">УСТАНОВКА И ПОДКЛЮЧЕНИЕ ТЕХНИКИ<br>ЛЕРУА МЕРЛЕН</th></tr></thead>
+
+
+                <form name="calc_56">
+                    <tr>
+                        <td name="tab_1">
+                            ПММ - ПОСУДОМОЕЧНОЙ МАШИНЫ
+                        </td>
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_56.input_56.value = (--amount.value, calc_56.input_56.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_56.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_56.input_56.value = (++amount.value * 700)">
+                        </td>
+                        <td name="tab_3">
+                            <input type="text" name="input_56" value=" " size="7">
+                        </td>
+                    </tr>
+                </form>
+
+                <form name="calc_57">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ВАРОЧНОЙ ЭЛЕКТРИЧЕСКОЙ ПОВЕРХНОСТИ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_57.input_57.value = (--amount.value, calc_57.input_57.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_57.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_57.input_57.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_57" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_58">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ДУХОВОГО ЭЛЕКТРИЧЕСКОГО ШКАФА
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_58.input_58.value = (--amount.value, calc_58.input_58.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_58.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_58.input_58.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_58" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_59">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ЭЛЕКТРОПЛИТЫ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_59.input_59.value = (--amount.value, calc_59.input_59.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_59.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_59.input_59.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_59" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_60">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            СТИРАЛЬНОЙ МАШИНЫ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_60.input_60.value = (--amount.value, calc_60.input_60.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_60.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_60.input_60.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_60" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_61">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ВСТРАИВАЕМОЙ СТИРАЛЬНОЙ МАШИНЫ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_61.input_61.value = (--amount.value, calc_61.input_61.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_61.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_61.input_61.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_61" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_62">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ВСТРАИВАЕМОГО ХОЛОДИЛЬНИКА
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_62.input_62.value = (--amount.value, calc_62.input_62.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_62.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_62.input_62.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_62" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_63">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ИЗМЕЛЬЧИТЕЛЯ ПИЩИВЫХ ОТХОДОВ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_63.input_63.value = (--amount.value, calc_63.input_63.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_63.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_63.input_63.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_63" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_64">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ФИЛЬТРА ДЛЯ ПИТЬЕВОЙ ВОДЫ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_64.input_64.value = (--amount.value, calc_64.input_64.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_64.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_64.input_64.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_64" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_65">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ПОДКЛЮЧЕНИЕ ВЫТЯЖКИ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_65.input_65.value = (--amount.value, calc_65.input_65.value - 700)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_65.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_65.input_65.value = (++amount.value * 700)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_65" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_66">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            ВСТРОЕННОЙ СВЧ - МИКРОВОЛНОВАЯ ПЕЧЬ
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_66.input_66.value = (--amount.value, calc_66.input_66.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_66.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_66.input_66.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_66" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <thead><tr><th colspan="3">УСТАНОВКА И ПОДКЛЮЧЕНИЕ ТЕХНИКИ<br>НЕ ЛЕРУА МЕРЛЕН</th></tr></thead>
+                
+                <form name="calc_67">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка ВАРОЧНОЙ ЭЛЕКТРИЧЕСКОЙ ПОВЕРХНОСТИ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_67.input_67.value = (--amount.value, calc_67.input_67.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_67.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_67.input_67.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_67" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_68">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение ВАРОЧНОЙ ЭЛЕКТРИЧЕСКОЙ ПОВЕРХНОСТИ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_68.input_68.value = (--amount.value, calc_68.input_68.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_68.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_68.input_68.value = (++amount.value * 600)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_68" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_69">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка ДУХОВОГО ЭЛЕКТРИЧЕСКОГО ШКАФА.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_69.input_69.value = (--amount.value, calc_69.input_69.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_69.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_69.input_69.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_69" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_70">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение ДУХОВОГО ЭЛЕКТРИЧЕСКОГО ШКАФА.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_70.input_70.value = (--amount.value, calc_70.input_70.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_70.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_70.input_70.value = (++amount.value * 600)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_70" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_71">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка ЭЛЕКТРОПЛИТЫ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_71.input_71.value = (--amount.value, calc_71.input_71.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_71.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_71.input_71.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_71" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_81">
+                    
+                    <tr>
+                
+                        <td name="tab_1">
+                            Подключение ЭЛЕКТРОПЛИТЫ.
+                        </td>
+                
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_81.input_81.value = (--amount.value, calc_81.input_81.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_81.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_81.input_81.value = (++amount.value * 600)">
+                        </td>
+                
+                        <td name="tab_3">
+                            <input type="text" name="input_81" value=" " size="7">
+                        </td>
+                
+                    </tr>
+                
+                </form>
+
+                <form name="calc_72">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка СТИРАЛЬНОЙ МАШИНЫ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_72.input_72.value = (--amount.value, calc_72.input_72.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_72.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_72.input_72.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_72" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_73">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение СТИРАЛЬНОЙ МАШИНЫ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_73.input_73.value = (--amount.value, calc_73.input_73.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_73.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_73.input_73.value = (++amount.value * 600)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_73" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_74">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка ПОСУДОМОЕЧНОЙ МАШИНЫ - ПММ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_74.input_74.value = (--amount.value, calc_74.input_74.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_74.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_74.input_74.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_74" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_75">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение ПОСУДОМОЕЧНОЙ МАШИНЫ - ПММ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_75.input_75.value = (--amount.value, calc_75.input_75.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_75.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_75.input_75.value = (++amount.value * 600)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_75" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_76">
+
+                    <tr>
+                        <td name="tab_1">
+                            Наращивание жесткого сливного шланга более 1,2м
+                            <br>при подключении ПОСУДОМОЕЧНОЙ МАШИНЫ - ПММ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_76.input_76.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_76.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_76.input_76.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_76" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_77">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка встроенной СВЧ - микроволновая печь.
+                            <br>Без подключения. Без подпила фасада.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_77.input_77.value = (--amount.value, calc_77.input_77.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_77.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_77.input_77.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_77" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_78">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение встроенной СВЧ - микроволновая печь.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_78.input_78.value = (--amount.value, calc_78.input_78.value - 300)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_78.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_78.input_78.value = (++amount.value * 300)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_78" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_79">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка ВЫТЯЖКИ.
+                            <br>Без подключения. Без переделки каркаса.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_79.input_79.value = (--amount.value, calc_79.input_79.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_79.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_79.input_79.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_79" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_80">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение ВЫТЯЖКИ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_80.input_80.value = (--amount.value, calc_80.input_80.value - 600)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_80.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_80.input_80.value = (++amount.value * 600)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_80" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_82">
+
+                    <tr>
+                        <td name="tab_1">
+                            Прокладка воздуховода гофрированным шлангом.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_82.input_82.value = ((amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_82.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_82.input_82.value = ((amount.value = (1 / 10 + +amount.value).toFixed(1)) * 200).toFixed()">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_82" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_83">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка и подключение ВСТРАИВАЕМОГО ХОЛОДИЛЬНИКА.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_83.input_83.value = (--amount.value, calc_83.input_83.value - 1100)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_83.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_83.input_83.value = (++amount.value * 1100)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_83" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_84">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка МОЙКИ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_84.input_84.value = (--amount.value, calc_84.input_84.value - 500)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_84.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_84.input_84.value = (++amount.value * 500)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_84" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_85">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение мойки с сифоном.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_85.input_85.value = (--amount.value, calc_85.input_85.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_85.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_85.input_85.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_85" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_86">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка гофротрубы сифона длиной более 0,8м.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_86.input_86.value = (--amount.value, calc_86.input_86.value - 200)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_86.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_86.input_86.value = (++amount.value * 200)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_86" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_87">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка СМЕСИТЕЛЯ.
+                            <br>Без подключения.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_87.input_87.value = (--amount.value, calc_87.input_87.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_87.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_87.input_87.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_87" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_88">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Подключение СМЕСИТЕЛЯ.
+                            <br>Без доработки коммуникаций.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_88.input_88.value = (--amount.value, calc_88.input_88.value - 400)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_88.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_88.input_88.value = (++amount.value * 400)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_88" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+
+                <form name="calc_89">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка и подключение ИЗМЕЛЬЧИТЕЛЯ ПИЩИВЫХ ОТХОДОВ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_89.input_89.value = (--amount.value, calc_89.input_89.value - 800)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_89.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_89.input_89.value = (++amount.value * 800)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_89" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_90">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Установка и подключение ФИЛЬТРА ДЛЯ ПИТЬЕВОЙ ВОДЫ.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_90.input_90.value = (--amount.value, calc_90.input_90.value - 800)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_90.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_90.input_90.value = (++amount.value * 800)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_90" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+
+                <form name="calc_91">
+                    
+                    <tr>
+
+                        <td name="tab_1">
+                            Монтаж ручек, ножек.
+                        </td>
+
+                        <td name="tab_2" class="nowrap">
+                            <input type="button" name="down" value="◄" OnClick="calc_91.input_91.value = (--amount.value, calc_91.input_91.value - 50)">
+                            <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_91.value = ' '">
+                            <input type="button" name="up" value="►" OnClick="calc_91.input_91.value = (++amount.value * 50)">
+                        </td>
+
+                        <td name="tab_3">
+                            <input type="text" name="input_91" value=" " size="7">
+                        </td>
+
+                    </tr>
+
+                </form>
+                
+            </tbody>
+            
+        </table>
+
+                <h2 class="table-headers">ИТОГОВАЯ СУММА</h2>
+        
+                <table>
+                    <tbody>
+                        
+                        <form name="calc">
+                            <tr>
+                                <td name="tab_1"><input type="button" name="result" value="ИТОГ" OnClick="calc.input.value = (
+                                    Number(calc_1.input_1.value) +
+                                    Number(calc_2.input_2.value) +
+                                    Number(calc_3.input_3.value) +
+                                    Number(calc_4.input_4.value) +
+                                    Number(calc_5.input_5.value) +
+                                    Number(calc_6.input_6.value) +
+                                    Number(calc_7.input_7.value) +
+                                    Number(calc_8.input_8.value) +
+                                    Number(calc_9.input_9.value) +
+                                    Number(calc_10.input_10.value) +
+                                    Number(calc_11.input_11.value) +
+                                    Number(calc_12.input_12.value) +
+                                    Number(calc_13.input_13.value) +
+                                    Number(calc_14.input_14.value) +
+                                    Number(calc_15.input_15.value) +
+                                    Number(calc_16.input_16.value) +
+                                    Number(calc_17.input_17.value) +
+                                    Number(calc_18.input_18.value) +
+                                    Number(calc_19.input_19.value) +
+                                    Number(calc_20.input_20.value) +
+                                    Number(calc_21.input_21.value) +
+                                    Number(calc_22.input_22.value) +
+                                    Number(calc_23.input_23.value) +
+                                    Number(calc_24.input_24.value) +
+                                    Number(calc_25.input_25.value) +
+                                    Number(calc_26.input_26.value) +
+                                    Number(calc_27.input_27.value) +
+                                    Number(calc_28.input_28.value) +
+                                    Number(calc_29.input_29.value) +
+                                    Number(calc_30.input_30.value) +
+                                    Number(calc_31.input_31.value) +
+                                    Number(calc_32.input_32.value) +
+                                    Number(calc_33.input_33.value) +
+                                    Number(calc_34.input_34.value) +
+                                    Number(calc_35.input_35.value) +
+                                    Number(calc_36.input_36.value) +
+                                    Number(calc_37.input_37.value) +
+                                    Number(calc_38.input_38.value) +
+                                    Number(calc_39.input_39.value) +
+                                    Number(calc_40.input_40.value) +
+                                    Number(calc_41.input_41.value) +
+                                    Number(calc_42.input_42.value) +
+                                    Number(calc_43.input_43.value) +
+                                    Number(calc_44.input_44.value) +
+                                    Number(calc_45.input_45.value) +
+                                    Number(calc_46.input_46.value) +
+                                    Number(calc_47.input_47.value) +
+                                    Number(calc_48.input_48.value) +
+                                    Number(calc_49.input_49.value) +
+                                    Number(calc_50.input_50.value) +
+                                    Number(calc_51.input_51.value) +
+                                    Number(calc_52.input_52.value) +
+                                    Number(calc_53.input_53.value) +
+                                    Number(calc_54.input_54.value) +
+                                    Number(calc_55.input_55.value) +
+                                    Number(calc_56.input_56.value) +
+                                    Number(calc_57.input_57.value) +
+                                    Number(calc_58.input_58.value) +
+                                    Number(calc_59.input_59.value) +
+                                    Number(calc_60.input_60.value) +
+                                    Number(calc_61.input_61.value) +
+                                    Number(calc_62.input_62.value) +
+                                    Number(calc_63.input_63.value) +
+                                    Number(calc_64.input_64.value) +
+                                    Number(calc_65.input_65.value) +
+                                    Number(calc_66.input_66.value) +
+                                    Number(calc_67.input_67.value) +
+                                    Number(calc_68.input_68.value) +
+                                    Number(calc_69.input_69.value) +
+                                    Number(calc_70.input_70.value) +
+                                    Number(calc_71.input_71.value) +
+                                    Number(calc_72.input_72.value) +
+                                    Number(calc_73.input_73.value) +
+                                    Number(calc_74.input_74.value) +
+                                    Number(calc_75.input_75.value) +
+                                    Number(calc_76.input_76.value) +
+                                    Number(calc_77.input_77.value) +
+                                    Number(calc_78.input_78.value) +
+                                    Number(calc_79.input_79.value) +
+                                    Number(calc_80.input_80.value) +
+                                    Number(calc_81.input_81.value) +
+                                    Number(calc_82.input_82.value) +
+                                    Number(calc_83.input_83.value) +
+                                    Number(calc_84.input_84.value) +
+                                    Number(calc_85.input_85.value) +
+                                    Number(calc_86.input_86.value) +
+                                    Number(calc_87.input_87.value) +
+                                    Number(calc_88.input_88.value) +
+                                    Number(calc_89.input_89.value) +
+                                    Number(calc_90.input_90.value) +
+                                    Number(calc_91.input_91.value))"></td>
+                                    
+                                <td name="tab_1">
+                                    <input type="text" name="input" value=" " size="7">
+                                </td>
+                                <td name="tab_1">
+                                    <input type="button" name="amount" value="C" OnClick="amount.value = 'C', input.value = ' '">
+                                </td>
+                                <td name="tab_1">
+                                    <input type="button" name="allclear" value="AC" OnClick="calc.input.value = (
+                                    (calc_1.input_1.value) ='',
+                                    (calc_2.input_2.value) ='',
+                                    (calc_3.input_3.value) ='',
+                                    (calc_4.input_4.value) ='',
+                                    (calc_5.input_5.value) ='',
+                                    (calc_6.input_6.value) ='',
+                                    (calc_7.input_7.value) ='',
+                                    (calc_8.input_8.value) ='',
+                                    (calc_9.input_9.value) ='',
+                                    (calc_10.input_10.value) ='',
+                                    (calc_11.input_11.value) ='',
+                                    (calc_12.input_12.value) ='',
+                                    (calc_13.input_13.value) ='',
+                                    (calc_14.input_14.value) ='',
+                                    (calc_15.input_15.value) ='',
+                                    (calc_16.input_16.value) ='',
+                                    (calc_17.input_17.value) ='',
+                                    (calc_18.input_18.value) ='',
+                                    (calc_19.input_19.value) ='',
+                                    (calc_20.input_20.value) ='',
+                                    (calc_21.input_21.value) ='',
+                                    (calc_22.input_22.value) ='',
+                                    (calc_23.input_23.value) ='',
+                                    (calc_24.input_24.value) ='',
+                                    (calc_25.input_25.value) ='',
+                                    (calc_26.input_26.value) ='',
+                                    (calc_27.input_27.value) ='',
+                                    (calc_28.input_28.value) ='',
+                                    (calc_29.input_29.value) ='',
+                                    (calc_30.input_30.value) ='',
+                                    (calc_31.input_31.value) ='',
+                                    (calc_32.input_32.value) ='',
+                                    (calc_33.input_33.value) ='',
+                                    (calc_34.input_34.value) ='',
+                                    (calc_35.input_35.value) ='',
+                                    (calc_36.input_36.value) ='',
+                                    (calc_37.input_37.value) ='',
+                                    (calc_38.input_38.value) ='',
+                                    (calc_39.input_39.value) ='',
+                                    (calc_40.input_40.value) ='',
+                                    (calc_41.input_41.value) ='',
+                                    (calc_42.input_42.value) ='',
+                                    (calc_43.input_43.value) ='',
+                                    (calc_44.input_44.value) ='',
+                                    (calc_45.input_45.value) ='',
+                                    (calc_46.input_46.value) ='',
+                                    (calc_47.input_47.value) ='',
+                                    (calc_48.input_48.value) ='',
+                                    (calc_49.input_49.value) ='',
+                                    (calc_50.input_50.value) ='',
+                                    (calc_51.input_51.value) ='',
+                                    (calc_52.input_52.value) ='',
+                                    (calc_53.input_53.value) ='',
+                                    (calc_54.input_54.value) ='',
+                                    (calc_55.input_55.value) ='',
+                                    (calc_56.input_56.value) ='',
+                                    (calc_57.input_57.value) ='',
+                                    (calc_58.input_58.value) ='',
+                                    (calc_59.input_59.value) ='',
+                                    (calc_60.input_60.value) ='',
+                                    (calc_61.input_61.value) ='',
+                                    (calc_62.input_62.value) ='',
+                                    (calc_63.input_63.value) ='',
+                                    (calc_64.input_64.value) ='',
+                                    (calc_65.input_65.value) ='',
+                                    (calc_66.input_66.value) ='',
+                                    (calc_67.input_67.value) ='',
+                                    (calc_68.input_68.value) ='',
+                                    (calc_69.input_69.value) ='',
+                                    (calc_70.input_70.value) ='',
+                                    (calc_71.input_71.value) ='',
+                                    (calc_72.input_72.value) ='',
+                                    (calc_73.input_73.value) ='',
+                                    (calc_74.input_74.value) ='',
+                                    (calc_75.input_75.value) ='',
+                                    (calc_76.input_76.value) ='',
+                                    (calc_77.input_77.value) ='',
+                                    (calc_78.input_78.value) ='',
+                                    (calc_79.input_79.value) ='',
+                                    (calc_80.input_80.value) ='',
+                                    (calc_81.input_81.value) ='',
+                                    (calc_82.input_82.value) ='',
+                                    (calc_83.input_83.value) ='',
+                                    (calc_84.input_84.value) ='',
+                                    (calc_85.input_85.value) ='',
+                                    (calc_86.input_86.value) ='',
+                                    (calc_87.input_87.value) ='',
+                                    (calc_88.input_88.value) ='',
+                                    (calc_89.input_89.value) ='',
+                                    (calc_90.input_90.value) ='',
+                                    (calc_91.input_91.value) ='',
+
+                                    (calc_1.amount.value) = '0',
+                                    (calc_2.amount.value) = '0',
+                                    (calc_3.amount.value) = '0',
+                                    (calc_4.amount.value) = '0',
+                                    (calc_5.amount.value) = '0',
+                                    (calc_6.amount.value) = '0',
+                                    (calc_7.amount.value) = '0',
+                                    (calc_8.amount.value) = '0',
+                                    (calc_9.amount.value) = '0',
+                                    (calc_10.amount.value) = '0',
+                                    (calc_11.amount.value) = '0',
+                                    (calc_12.amount.value) = '0',
+                                    (calc_13.amount.value) = '0',
+                                    (calc_14.amount.value) = '0',
+                                    (calc_15.amount.value) = '0',
+                                    (calc_16.amount.value) = '0',
+                                    (calc_17.amount.value) = '0',
+                                    (calc_18.amount.value) = '0',
+                                    (calc_19.amount.value) = '0',
+                                    (calc_20.amount.value) = '0',
+                                    (calc_21.amount.value) = '0',
+                                    (calc_22.amount.value) = '0',
+                                    (calc_23.amount.value) = '0',
+                                    (calc_24.amount.value) = '0',
+                                    (calc_25.amount.value) = '0',
+                                    (calc_26.amount.value) = '0',
+                                    (calc_27.amount.value) = '0',
+                                    (calc_28.amount.value) = '0',
+                                    (calc_29.amount.value) = '0',
+                                    (calc_30.amount.value) = '0',
+                                    (calc_31.amount.value) = '0',
+                                    (calc_32.amount.value) = '0',
+                                    (calc_33.amount.value) = '0',
+                                    (calc_34.amount.value) = '0',
+                                    (calc_35.amount.value) = '0',
+                                    (calc_36.amount.value) = '0',
+                                    (calc_37.amount.value) = '0',
+                                    (calc_38.amount.value) = '0',
+                                    (calc_39.amount.value) = '0',
+                                    (calc_40.amount.value) = '0',
+                                    (calc_41.amount.value) = '0',
+                                    (calc_42.amount.value) = '0',
+                                    (calc_43.amount.value) = '0',
+                                    (calc_44.amount.value) = '0',
+                                    (calc_45.amount.value) = '0',
+                                    (calc_46.amount.value) = '0',
+                                    (calc_47.amount.value) = '0',
+                                    (calc_48.amount.value) = '0',
+                                    (calc_49.amount.value) = '0',
+                                    (calc_50.amount.value) = '0',
+                                    (calc_51.amount.value) = '0',
+                                    (calc_52.amount.value) = '0',
+                                    (calc_53.amount.value) = '0',
+                                    (calc_54.amount.value) = '0',
+                                    (calc_55.amount.value) = '0',
+                                    (calc_56.amount.value) = '0',
+                                    (calc_57.amount.value) = '0',
+                                    (calc_58.amount.value) = '0',
+                                    (calc_59.amount.value) = '0',
+                                    (calc_60.amount.value) = '0',
+                                    (calc_61.amount.value) = '0',
+                                    (calc_62.amount.value) = '0',
+                                    (calc_63.amount.value) = '0',
+                                    (calc_64.amount.value) = '0',
+                                    (calc_65.amount.value) = '0',
+                                    (calc_66.amount.value) = '0',
+                                    (calc_67.amount.value) = '0',
+                                    (calc_68.amount.value) = '0',
+                                    (calc_69.amount.value) = '0',
+                                    (calc_70.amount.value) = '0',
+                                    (calc_71.amount.value) = '0',
+                                    (calc_72.amount.value) = '0',
+                                    (calc_73.amount.value) = '0',
+                                    (calc_74.amount.value) = '0',
+                                    (calc_75.amount.value) = '0',
+                                    (calc_76.amount.value) = '0',
+                                    (calc_77.amount.value) = '0',
+                                    (calc_78.amount.value) = '0',
+                                    (calc_79.amount.value) = '0',
+                                    (calc_80.amount.value) = '0',
+                                    (calc_81.amount.value) = '0',
+                                    (calc_82.amount.value) = '0',
+                                    (calc_83.amount.value) = '0',
+                                    (calc_84.amount.value) = '0',
+                                    (calc_85.amount.value) = '0',
+                                    (calc_86.amount.value) = '0',
+                                    (calc_87.amount.value) = '0',
+                                    (calc_88.amount.value) = '0',
+                                    (calc_89.amount.value) = '0',
+                                    (calc_90.amount.value) = '0',
+                                    (calc_91.amount.value) = '0',
+                                    amount.value = 'C', input.value = ' ' )">
+                                </td>
+                            </tr>
+                        </form>
+        
+                        
+        
+        
+                    </tbody>
+                </table>
+        
+    </main>
+</body>

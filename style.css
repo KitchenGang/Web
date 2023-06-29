@@ -1,0 +1,291 @@
+body {
+background-color: #79db76; text-align: center;
+}
+
+table {
+  background: rgb(184, 194, 216);
+  border-collapse: collapse;
+  /*убираем пустые промежутки между ячейками*/
+  margin:auto;
+  /*Выравниваем таблицу по центру окна*/
+  
+  /*width: auto;
+  height: auto;
+  display: inline-block;*/
+}
+
+.text-h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 1px 2px rgb(75, 75, 75);
+}
+
+.main-menu { /*главная страница*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: blue;
+  text-shadow: 0px 2px 3px rgb(145, 145, 145);
+  background-color: #5bf17c;
+  border: 3px solid hsl(119, 63%, 84%);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 5px 30px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*transition-duration: 0.2s;*/
+  /*-webkit-transition-duration: 0.2s;*/
+}
+
+.main-menu:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  /* background-color: #1900ff;
+    color: rgb(0, 247, 255);*/
+}
+
+.time { /* дата и время*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  color: rgb(110, 103, 103);
+}
+
+.page-titles {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: blue;
+  text-shadow: 0px 2px 3px rgb(145, 145, 145);
+  background-color: #5bf17c;
+  border: 2px solid hsl(175, 52%, 47%);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 2px 10px;
+  text-align: center;
+  display: inline-table;
+}
+
+.fontstyle-2 { /* Переход на главную*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 9px;
+  color: blue;
+  background-color: #6af096;
+  border: 2px solid hsl(118, 81%, 62%);
+  border-radius: 1px;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 1px 6px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fontstyle-2:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table-headers {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: hsl(240, 100%, 50%);
+  font-weight: 4px;
+}
+
+th {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+  /* Рамка вокруг таблицы */
+  font-weight: bolder;
+}
+
+td[name="tab_1"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 8px;
+  text-align: left;
+  border: 1px solid rgb(0, 0, 0);
+  /* Рамка вокруг таблицы */
+  font-weight: bolder;
+}
+
+td[name="tab_2"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 8px;
+  text-align: left;
+  border: 1px solid rgb(0, 0, 0);
+  /* Рамка вокруг таблицы */
+  font-weight: bolder;
+}
+
+td[name="tab_3"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5px;
+  text-align: left;
+  border: 1px solid rgb(0, 0, 0);
+  /* Рамка вокруг таблицы */
+  font-weight: bolder;
+}
+
+.group-in-table {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: hsl(0, 72%, 42%); 
+  font-size: 14px; 
+  text-align: center;
+  border-collapse: collapse;
+  /*убираем пустые промежутки между ячейками*/
+}
+
+.nowrap {
+  white-space: nowrap;
+  text-align: center;
+}
+
+input[name=up] { /* стрелка повышения */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 13px;
+  color: red;
+  font-weight: bolder; 
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+  padding: 0px 15px 0px 15px;
+}
+
+input[name=down] { /* стрелка понижение  */
+  font-family:'Times New Roman', Times, serif; 
+  font-size: 13px;
+  color: red;
+  font-weight: bolder; 
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+  padding: 0px 15px 0px 15px;
+}
+
+input[name=amount] { /*  количество в таблице */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 11px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder; 
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+input[type=text] { /* результат в таблице */
+  font-family:'Times New Roman', Times, serif; 
+  font-size: 13px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+input[value="C"] { /* С */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder; 
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+input[name="result"] { /* кнопка ИТОГ */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: red;
+  font-weight: bolder; 
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+input[name="allclear"] { /* AC */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(14, 0, 174);
+  font-weight: bolder;
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+input[name="input"] { /* итоговая сумма */
+  all: none;
+  font-size: 15px;
+  text-align: center;
+}
+
+button[name="result"] { /* Итог Модульная Кухня */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(14, 0, 174);
+  font-weight: bolder;
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+button[name="result_2"] { /* Итог Проектная Кухня */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(14, 0, 174);
+  font-weight: bolder;
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+button[name="result_3"] { /* СБРОС */
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(14, 0, 174);
+  font-weight: bolder;
+  background-color: rgb(184, 194, 216); 
+  border: 0px;
+}
+
+
+/* Кнопки "ИТОГ", "ОБЩИЙ ИТОГ", "СБРОС" - КАЛЬКУЛЯТОР З.П */
+button[name="result_zp"] {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  width: 90px;
+  background-color: #00ff6a;
+  border-radius: 5px;
+  font-size: 10px;
+  border: 0.1px solid  rgba(0, 38, 255, 0.397);
+  margin-top: 5px;
+  margin-bottom: 1px;
+  display: inline-table;
+  color: rgb(0, 38, 255);
+}
+/* button[name="result_zp"]:hover {box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #97f3d1;
+  color: red;
+} */
+
+/* Поле для ввода КАЛЬКУЛЯТОР З.П*/
+div input[type="text"] {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: bolder;
+  border-radius: 3px;
+  background-color:  #b9d4ff5d;
+  outline: none;
+  width: 100px;
+}
+
+/* Итогавая сумма КАЛЬКУЛЯТОР З.П */
+span[name="but_res"] {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(0, 30, 255);
+}
