@@ -13,108 +13,55 @@
     
     <main>
         
-        <h2 class="page-titles">ПРОЕКТНАЯ КУХНЯ</h2>
+        <p><button onclick="window.location.href='index.html'" class="homepage_button">главная</button></p>
         
-        <p><button onclick="window.location.href='index.html'" class="fontstyle-2">главная</button></p>
-        
-        <h2 class="table-headers">ОСНОВНАЯ УСЛУГА</h2>
-
         <table>
-
-            <thead>
-                <tr><th>Наименование услуги</th><th>Кол</th><th>Сумма</th></tr>
-            </thead>
-
             <tbody>
+
+                <thead style="text-transform: uppercase">
+                    <tr>
+                        <th>Наименование услуги</th><th>Количество</th><th>Сумма</th>
+                    </tr>
+                </thead>
 
                 <form name="calc_1">
 
                     <tr>
 
                         <td name="tab_1">
-                            Сборка каркасов кухни,
-                            <br>навеска и стяжка верхних и нижних корпусов,
-                            <br>установка столешницы ДСП, плинтуса, цоколя, фальшпанели,
-                            <br>навеска и регулировка дверей.
-                            <br>
-                            <br>Установка и подключение
-                            <br>ЭЛЕКТРИЧЕСКОЙ ВАРОЧНОЙ ПАНЕЛИ<br>или<br>ЭЛЕКТРОПЛИТЫ<br>или<br>ДУХОВОГО ШКАФА
-                            <br>на готовые коммуникации.
-                            <br>
-                            <br>Установка и подключение
-                            <br>МОЙКИ без наращивания шлангов, СМЕСИТЕЛЯ без доработок.
-                            <br>
-                            <br>Установка ВЫТЯЖКИ без переделки каркаса.
-                            <br>Подключение в режиме рециркуляции.
-                            <br>
-                            <br>Установка встроенной СВЧ без подпила фасада.
-                            <br>
-                            <br>Установка сушки и выдвижных корзин.
-                            <br>
-                            <br>Установка рейлинга в стеновую панель ДСП.
-                            <br>
-                            <br>Распил СТОЛЕШНИЦЫ или СТЕНОВОЙ ПАНЕЛИ ДСП (2 пила включены в стоимость).
-                            <br>
-                            <br>Вырез отверстия под ВАРОЧНУЮ ПАНЕЛЬ и МОЙКУ.
-                            <br>
-                            <br>Вырез отверстия под СМЕСИТЕЛЬ в МОЙКЕ (металл или фрагранит), в столешнице ДСП.
-                            <br>
-                            <br>Вырез под трубы (2 выреза включены в стоимость).
-                            <br>
-                            <br>Монтаж ручек и ножек.
-                            <br>
-                            <br>Упаковка мусора (без выноса из помещения заказчика).
+                            Сборка и установка кухонного каркаса
                         </td>
 
                         <td name="tab_2" class="nowrap">
-                            <input type="button" name="down" value="◄" OnClick="calc_1.input_1.value = (amount.value = (-1 / 10 + +amount.value).toFixed(1)) * 2500">
+                            <input type="button" name="down" value="◄" OnClick="calc_1.input_1.value = (--amount.value, calc_1.input_1.value - 650)">
                             <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_1.value = ' '">
-                            <input type="button" name="up" value="►" OnClick="calc_1.input_1.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 2500">
+                            <input type="button" name="up" value="►" OnClick="calc_1.input_1.value = (++amount.value * 650)">
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_1" value=" " size="7">
+                            <input type="text" name="input_1" value=" ">
                         </td>
 
                     </tr>
 
                 </form>
 
-            </tbody>
-            
-        </table>
-        
-        <h2 class="table-headers">ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ</h2>
-        
-        <p class="text-h1">ПРИ ПОКУПКИ ТОВАРОВ В<br>ЛЕРУА МЕРЛЕН</p>
-
-
-        <table>
-
-            <tbody>
-
-                <thead>
-                    <tr>
-                        <th>Наименование услуги</th><th>Кол</th><th>Сумма</th>
-                    </tr>
-                </thead>
-
                 <form name="calc_2">
                     
                     <tr>
 
                         <td name="tab_1">
-                            Вырез технический под трубы.
+                            Сборка и установка колонны
                         </td>
 
                         <td name="tab_2" class="nowrap">
-                            <input type="button" name="down" value="◄" OnClick="calc_2.input_2.value = (--amount.value, calc_2.input_2.value - 100)">
+                            <input type="button" name="down" value="◄" OnClick="calc_2.input_2.value = (--amount.value, calc_2.input_2.value - 1000)">
                             <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_2.value = ' '">
-                            <input type="button" name="up" value="►" OnClick="calc_2.input_2.value = (++amount.value * 100)">
+                            <input type="button" name="up" value="►" OnClick="calc_2.input_2.value = (++amount.value * 1000)">
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_2" value=" " size="7">
+                            <input type="text" name="input_2" value=" ">
                         </td>
 
                     </tr>
@@ -126,17 +73,17 @@
                     <tr>
 
                         <td name="tab_1">
-                            Вырез под розетки, светильники.
+                            Уменьшение глубины / высоты / ширины шкафа
                         </td>
 
                         <td name="tab_2" class="nowrap">
-                            <input type="button" name="down" value="◄" OnClick="calc_3.input_3.value = (--amount.value, calc_3.input_3.value - 200)">
+                            <input type="button" name="down" value="◄" OnClick="calc_3.input_3.value = (--amount.value, calc_3.input_3.value - 800)">
                             <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_3.value = ' '">
-                            <input type="button" name="up" value="►" OnClick="calc_3.input_3.value = (++amount.value * 200)">
+                            <input type="button" name="up" value="►" OnClick="calc_3.input_3.value = (++amount.value * 800)">
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_3" value=" " size="7">
+                            <input type="text" name="input_3" value=" ">
                         </td>
 
                     </tr>
@@ -148,18 +95,17 @@
                     <tr>
 
                         <td name="tab_1">
-                            Уменьшение глубины или высоты шкафа.
-                            <br>Запил шкафов или фасадов или фальшпанелей.
+                            Выпил одного отверстия / углубления / присадка под петлю
                         </td>
 
                         <td name="tab_2" class="nowrap">
-                            <input type="button" name="down" value="◄" OnClick="calc_4.input_4.value = (--amount.value, calc_4.input_4.value - 700)">
+                            <input type="button" name="down" value="◄" OnClick="calc_4.input_4.value = (--amount.value, calc_4.input_4.value - 150)">
                             <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_4.value = ' '">
-                            <input type="button" name="up" value="►" OnClick="calc_4.input_4.value = (++amount.value * 700)">
+                            <input type="button" name="up" value="►" OnClick="calc_4.input_4.value = (++amount.value * 150)">
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_4" value=" " size="7">
+                            <input type="text" name="input_4" value=" ">
                         </td>
 
                     </tr>
@@ -171,17 +117,17 @@
                     <tr>
 
                         <td name="tab_1">
-                            Распил столешницы или стеновой панели.
+                            Прямой распил фальшпанели / фасада / полки
                         </td>
 
                         <td name="tab_2" class="nowrap">
-                            <input type="button" name="down" value="◄" OnClick="calc_5.input_5.value = (--amount.value, calc_5.input_5.value - 150)">
+                            <input type="button" name="down" value="◄" OnClick="calc_5.input_5.value = (--amount.value, calc_5.input_5.value - 300)">
                             <input type="button" name="amount" value="0" OnClick="amount.value = '0', input_5.value = ' '">
-                            <input type="button" name="up" value="►" OnClick="calc_5.input_5.value = (++amount.value * 150)">
+                            <input type="button" name="up" value="►" OnClick="calc_5.input_5.value = (++amount.value * 300)">
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_5" value=" " size="7">
+                            <input type="text" name="input_5" value=" ">
                         </td>
 
                     </tr>
@@ -204,7 +150,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_6" value=" " size="7">
+                            <input type="text" name="input_6" value=" ">
                         </td>
 
                     </tr>
@@ -227,7 +173,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_7" value=" " size="7">
+                            <input type="text" name="input_7" value=" ">
                         </td>
 
                     </tr>
@@ -249,7 +195,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_8" value=" " size="7">
+                            <input type="text" name="input_8" value=" ">
                         </td>
 
                     </tr>
@@ -272,7 +218,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_9" value=" " size="7">
+                            <input type="text" name="input_9" value=" ">
                         </td>
 
                     </tr>
@@ -294,7 +240,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_10" value=" " size="7">
+                            <input type="text" name="input_10" value=" ">
                         </td>
 
                     </tr>
@@ -316,7 +262,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_11" value=" " size="7">
+                            <input type="text" name="input_11" value=" ">
                         </td>
 
                     </tr>
@@ -338,7 +284,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_12" value=" " size="7">
+                            <input type="text" name="input_12" value=" ">
                         </td>
 
                     </tr>
@@ -360,7 +306,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_13" value=" " size="7">
+                            <input type="text" name="input_13" value=" ">
                         </td>
 
                     </tr>
@@ -382,7 +328,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_14" value=" " size="7">
+                            <input type="text" name="input_14" value=" ">
                         </td>
 
                     </tr>
@@ -404,7 +350,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_15" value=" " size="7">
+                            <input type="text" name="input_15" value=" ">
                         </td>
 
                     </tr>
@@ -430,7 +376,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_16" value=" " size="7">
+                            <input type="text" name="input_16" value=" ">
                         </td>
 
                     </tr>
@@ -453,7 +399,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_17" value=" " size="7">
+                            <input type="text" name="input_17" value=" ">
                         </td>
 
                     </tr>
@@ -477,7 +423,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_18" value=" " size="7">
+                            <input type="text" name="input_18" value=" ">
                         </td>
 
                     </tr>
@@ -500,7 +446,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_19" value=" " size="7">
+                            <input type="text" name="input_19" value=" ">
                         </td>
 
                     </tr>
@@ -522,7 +468,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_20" value=" " size="7">
+                            <input type="text" name="input_20" value=" ">
                         </td>
 
                     </tr>
@@ -544,7 +490,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_21" value=" " size="7">
+                            <input type="text" name="input_21" value=" ">
                         </td>
 
                     </tr>
@@ -566,7 +512,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_22" value=" " size="7">
+                            <input type="text" name="input_22" value=" ">
                         </td>
 
                     </tr>
@@ -590,7 +536,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_23" value=" " size="7">
+                            <input type="text" name="input_23" value=" ">
                         </td>
 
                     </tr>
@@ -613,7 +559,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_24" value=" " size="7">
+                            <input type="text" name="input_24" value=" ">
                         </td>
 
                     </tr>
@@ -636,7 +582,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_25" value=" " size="7">
+                            <input type="text" name="input_25" value=" ">
                         </td>
 
                     </tr>
@@ -658,7 +604,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_26" value=" " size="7">
+                            <input type="text" name="input_26" value=" ">
                         </td>
 
                     </tr>
@@ -681,7 +627,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_27" value=" " size="7">
+                            <input type="text" name="input_27" value=" ">
                         </td>
 
                     </tr>
@@ -703,7 +649,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_28" value=" " size="7">
+                            <input type="text" name="input_28" value=" ">
                         </td>
 
                     </tr>
@@ -725,7 +671,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_29" value=" " size="7">
+                            <input type="text" name="input_29" value=" ">
                         </td>
 
                     </tr>
@@ -747,7 +693,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_30" value=" " size="7">
+                            <input type="text" name="input_30" value=" ">
                         </td>
 
                     </tr>
@@ -770,7 +716,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_31" value=" " size="7">
+                            <input type="text" name="input_31" value=" ">
                         </td>
 
                     </tr>
@@ -792,7 +738,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_32" value=" " size="7">
+                            <input type="text" name="input_32" value=" ">
                         </td>
 
                     </tr>
@@ -815,7 +761,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_33" value=" " size="7">
+                            <input type="text" name="input_33" value=" ">
                         </td>
 
                     </tr>
@@ -836,7 +782,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_34" value=" " size="7">
+                            <input type="text" name="input_34" value=" ">
                         </td>
 
                     </tr>
@@ -861,7 +807,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_35" value=" " size="7">
+                            <input type="text" name="input_35" value=" ">
                         </td>
 
                     </tr>
@@ -882,7 +828,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_36" value=" " size="7">
+                            <input type="text" name="input_36" value=" ">
                         </td>
 
                     </tr>
@@ -904,7 +850,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_37" value=" " size="7">
+                            <input type="text" name="input_37" value=" ">
                         </td>
 
                     </tr>
@@ -926,7 +872,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_38" value=" " size="7">
+                            <input type="text" name="input_38" value=" ">
                         </td>
 
                     </tr>
@@ -948,7 +894,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_39" value=" " size="7">
+                            <input type="text" name="input_39" value=" ">
                         </td>
 
                     </tr>
@@ -970,7 +916,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_40" value=" " size="7">
+                            <input type="text" name="input_40" value=" ">
                         </td>
 
                     </tr>
@@ -992,7 +938,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_41" value=" " size="7">
+                            <input type="text" name="input_41" value=" ">
                         </td>
 
                     </tr>
@@ -1014,7 +960,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_42" value=" " size="7">
+                            <input type="text" name="input_42" value=" ">
                         </td>
 
                     </tr>
@@ -1038,7 +984,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_43" value=" " size="7">
+                            <input type="text" name="input_43" value=" ">
                         </td>
 
                     </tr>
@@ -1060,7 +1006,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_44" value=" " size="7">
+                            <input type="text" name="input_44" value=" ">
                         </td>
 
                     </tr>
@@ -1082,7 +1028,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_45" value=" " size="7">
+                            <input type="text" name="input_45" value=" ">
                         </td>
 
                     </tr>
@@ -1104,7 +1050,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_46" value=" " size="7">
+                            <input type="text" name="input_46" value=" ">
                         </td>
 
                     </tr>
@@ -1126,7 +1072,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_47" value=" " size="7">
+                            <input type="text" name="input_47" value=" ">
                         </td>
 
                     </tr>
@@ -1148,7 +1094,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_48" value=" " size="7">
+                            <input type="text" name="input_48" value=" ">
                         </td>
 
                     </tr>
@@ -1170,7 +1116,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_49" value=" " size="7">
+                            <input type="text" name="input_49" value=" ">
                         </td>
 
                     </tr>
@@ -1192,7 +1138,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_50" value=" " size="7">
+                            <input type="text" name="input_50" value=" ">
                         </td>
 
                     </tr>
@@ -1214,7 +1160,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_51" value=" " size="7">
+                            <input type="text" name="input_51" value=" ">
                         </td>
 
                     </tr>
@@ -1236,7 +1182,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_52" value=" " size="7">
+                            <input type="text" name="input_52" value=" ">
                         </td>
 
                     </tr>
@@ -1258,7 +1204,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_53" value=" " size="7">
+                            <input type="text" name="input_53" value=" ">
                         </td>
 
                     </tr>
@@ -1280,7 +1226,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_54" value=" " size="7">
+                            <input type="text" name="input_54" value=" ">
                         </td>
 
                     </tr>
@@ -1298,7 +1244,7 @@
                             <input type="button" name="up" value="►" OnClick="calc_55.input_55.value = (amount.value = (1 / 10 + +amount.value).toFixed(1)) * 300">
                         </td>
                         <td name="tab_3">
-                            <input type="text" name="input_55" value=" " size="7">
+                            <input type="text" name="input_55" value=" ">
                         </td>
                     </tr>
                 </form>
@@ -1317,7 +1263,7 @@
                             <input type="button" name="up" value="►" OnClick="calc_56.input_56.value = (++amount.value * 700)">
                         </td>
                         <td name="tab_3">
-                            <input type="text" name="input_56" value=" " size="7">
+                            <input type="text" name="input_56" value=" ">
                         </td>
                     </tr>
                 </form>
@@ -1337,7 +1283,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_57" value=" " size="7">
+                            <input type="text" name="input_57" value=" ">
                         </td>
 
                     </tr>
@@ -1359,7 +1305,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_58" value=" " size="7">
+                            <input type="text" name="input_58" value=" ">
                         </td>
 
                     </tr>
@@ -1381,7 +1327,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_59" value=" " size="7">
+                            <input type="text" name="input_59" value=" ">
                         </td>
 
                     </tr>
@@ -1403,7 +1349,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_60" value=" " size="7">
+                            <input type="text" name="input_60" value=" ">
                         </td>
 
                     </tr>
@@ -1425,7 +1371,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_61" value=" " size="7">
+                            <input type="text" name="input_61" value=" ">
                         </td>
 
                     </tr>
@@ -1447,7 +1393,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_62" value=" " size="7">
+                            <input type="text" name="input_62" value=" ">
                         </td>
 
                     </tr>
@@ -1469,7 +1415,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_63" value=" " size="7">
+                            <input type="text" name="input_63" value=" ">
                         </td>
 
                     </tr>
@@ -1491,7 +1437,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_64" value=" " size="7">
+                            <input type="text" name="input_64" value=" ">
                         </td>
 
                     </tr>
@@ -1513,7 +1459,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_65" value=" " size="7">
+                            <input type="text" name="input_65" value=" ">
                         </td>
 
                     </tr>
@@ -1535,7 +1481,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_66" value=" " size="7">
+                            <input type="text" name="input_66" value=" ">
                         </td>
 
                     </tr>
@@ -1560,7 +1506,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_67" value=" " size="7">
+                            <input type="text" name="input_67" value=" ">
                         </td>
 
                     </tr>
@@ -1582,7 +1528,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_68" value=" " size="7">
+                            <input type="text" name="input_68" value=" ">
                         </td>
 
                     </tr>
@@ -1605,7 +1551,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_69" value=" " size="7">
+                            <input type="text" name="input_69" value=" ">
                         </td>
 
                     </tr>
@@ -1627,7 +1573,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_70" value=" " size="7">
+                            <input type="text" name="input_70" value=" ">
                         </td>
 
                     </tr>
@@ -1650,7 +1596,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_71" value=" " size="7">
+                            <input type="text" name="input_71" value=" ">
                         </td>
 
                     </tr>
@@ -1672,7 +1618,7 @@
                         </td>
                 
                         <td name="tab_3">
-                            <input type="text" name="input_81" value=" " size="7">
+                            <input type="text" name="input_81" value=" ">
                         </td>
                 
                     </tr>
@@ -1695,7 +1641,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_72" value=" " size="7">
+                            <input type="text" name="input_72" value=" ">
                         </td>
 
                     </tr>
@@ -1717,7 +1663,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_73" value=" " size="7">
+                            <input type="text" name="input_73" value=" ">
                         </td>
 
                     </tr>
@@ -1740,7 +1686,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_74" value=" " size="7">
+                            <input type="text" name="input_74" value=" ">
                         </td>
 
                     </tr>
@@ -1762,7 +1708,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_75" value=" " size="7">
+                            <input type="text" name="input_75" value=" ">
                         </td>
 
                     </tr>
@@ -1784,7 +1730,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_76" value=" " size="7">
+                            <input type="text" name="input_76" value=" ">
                         </td>
 
                     </tr>
@@ -1807,7 +1753,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_77" value=" " size="7">
+                            <input type="text" name="input_77" value=" ">
                         </td>
 
                     </tr>
@@ -1829,7 +1775,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_78" value=" " size="7">
+                            <input type="text" name="input_78" value=" ">
                         </td>
 
                     </tr>
@@ -1852,7 +1798,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_79" value=" " size="7">
+                            <input type="text" name="input_79" value=" ">
                         </td>
 
                     </tr>
@@ -1874,7 +1820,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_80" value=" " size="7">
+                            <input type="text" name="input_80" value=" ">
                         </td>
 
                     </tr>
@@ -1895,7 +1841,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_82" value=" " size="7">
+                            <input type="text" name="input_82" value=" ">
                         </td>
 
                     </tr>
@@ -1917,7 +1863,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_83" value=" " size="7">
+                            <input type="text" name="input_83" value=" ">
                         </td>
 
                     </tr>
@@ -1940,7 +1886,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_84" value=" " size="7">
+                            <input type="text" name="input_84" value=" ">
                         </td>
 
                     </tr>
@@ -1962,7 +1908,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_85" value=" " size="7">
+                            <input type="text" name="input_85" value=" ">
                         </td>
 
                     </tr>
@@ -1984,7 +1930,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_86" value=" " size="7">
+                            <input type="text" name="input_86" value=" ">
                         </td>
 
                     </tr>
@@ -2007,7 +1953,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_87" value=" " size="7">
+                            <input type="text" name="input_87" value=" ">
                         </td>
 
                     </tr>
@@ -2030,7 +1976,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_88" value=" " size="7">
+                            <input type="text" name="input_88" value=" ">
                         </td>
 
                     </tr>
@@ -2053,7 +1999,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_89" value=" " size="7">
+                            <input type="text" name="input_89" value=" ">
                         </td>
 
                     </tr>
@@ -2075,7 +2021,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_90" value=" " size="7">
+                            <input type="text" name="input_90" value=" ">
                         </td>
 
                     </tr>
@@ -2097,7 +2043,7 @@
                         </td>
 
                         <td name="tab_3">
-                            <input type="text" name="input_91" value=" " size="7">
+                            <input type="text" name="input_91" value=" ">
                         </td>
 
                     </tr>
@@ -2209,7 +2155,7 @@
                                     Number(calc_91.input_91.value))"></td>
                                     
                                 <td name="tab_1">
-                                    <input type="text" name="input" value=" " size="7">
+                                    <input type="text" name="input" value=" ">
                                 </td>
                                 <td name="tab_1">
                                     <input type="button" name="amount" value="C" OnClick="amount.value = 'C', input.value = ' '">
@@ -2412,3 +2358,8 @@
         
     </main>
 </body>
+
+<!--<h2 class="page-titles">ПРОЕКТНАЯ КУХНЯ</h2>-->
+<!--<h2 class="table-headers">ОСНОВНАЯ УСЛУГА</h2>-->
+<!-- <h2 class="table-headers">ДОПОЛНИТЕЛЬНЫЕ РАБОТЫ</h2> -->
+<!-- <p class="text-h1">ПРИ ПОКУПКИ ТОВАРОВ В<br>ЛЕРУА МЕРЛЕН</p> -->
