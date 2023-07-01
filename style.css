@@ -6,17 +6,17 @@ text-align: center;
 
 /*Заголовок текста на главной странице*/
 .text-h1 {
-  width: 100vw;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 20px;
+  /*font-weight: bold;*/
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #808080;
-  padding: 10 px;
+  /*padding: 10px;*/
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   animation: dynamicText 1s infinite alternate;
+  width: 100vw;
 }
 
 @keyframes dynamicText {
