@@ -16,7 +16,6 @@ text-align: center;
   /*padding: 10px;*/
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   animation: dynamicText 1s infinite alternate;
-  width: 100vw;
 }
 
 @keyframes dynamicText {
