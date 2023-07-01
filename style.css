@@ -1,37 +1,56 @@
 
 body {
-background-color: #61dfff3b; 
+background-color: #66666666; 
 text-align: center;
 }
 
-/*Заголовок текста на главной странице*/
+/*ЗАГОЛОВОК ТЕКСТА - ГЛАВГНАЯ СТРАНИЦА*/
+
 .main_text {
   font-size: 20px;
-  color: #496de2;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  background-color: #515255;
-  /*padding: 10px;*/
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+  padding: 2px 2px 2px 2px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   animation: dynamicText 1s infinite alternate;
 }
 
 @keyframes dynamicText {
   0% {
-    color: #44d8cc;
+    color: #22aeffcb;
   }
   50% {
-    color: #4ab5c3;
+    color: #a6beffc7;
   }
   100% {
-    color: #6592e6;
+    color: #22ffed94;
   }
+}
+
+/*КНОПКА -  ПРАЙС - ГЛАВНАЯ СТРАНИЦА*/
+
+.price_button {
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 15px;
+  background-color: #4d4d4d;
+  border-radius: 10px;
+  border: none;
+  /*display: inline-block;*/
+  /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);*/
+  /*border: 5px solid #2b6dfcb6;*/
+}
+.price_button:hover {
+  background-color: #474747c9;
 }
 
 .text-h1 {
   font-size: 20px;
-  /*font-weight: bold;*/
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -42,7 +61,7 @@ text-align: center;
   animation: dynamicText 1s infinite alternate;
 }
 
-/*главная страница*/
+
 .main-menu { 
   display: inline-block;
   font-size: 15px;
@@ -56,7 +75,6 @@ text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border: 2px solid #ffffff;
 }
-
 .main-menu:hover {
   background-color: #2b5cff;
 }
