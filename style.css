@@ -5,6 +5,30 @@ text-align: center;
 }
 
 /*Заголовок текста на главной странице*/
+.main_text {
+  font-size: 20px;
+  color: #496de2;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background-color: #515255;
+  /*padding: 10px;*/
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: dynamicText 1s infinite alternate;
+}
+
+@keyframes dynamicText {
+  0% {
+    color: #44d8cc;
+  }
+  50% {
+    color: #4ab5c3;
+  }
+  100% {
+    color: #6592e6;
+  }
+}
+
 .text-h1 {
   font-size: 20px;
   /*font-weight: bold;*/
@@ -18,35 +42,23 @@ text-align: center;
   animation: dynamicText 1s infinite alternate;
 }
 
-@keyframes dynamicText {
-  0% {
-    color: #ffffff;
-  }
-  50% {
-    color: #8bc34a;
-  }
-  100% {
-    color: #ffffff;
-  }
-}
-
 /*главная страница*/
 .main-menu { 
   display: inline-block;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  padding: 20px 40px;
-  background-color: #8bc34a;
-  border-radius: 10px;
+  padding: 15px 15px;
+  background-color: #66a8f3;
+  border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border: 2px solid #ffffff;
 }
 
 .main-menu:hover {
-  background-color: #6b9b39;
+  background-color: #2b5cff;
 }
 
 .time { /* дата и время*/
