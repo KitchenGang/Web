@@ -6,6 +6,7 @@ text-align: center;
 
 /*Заголовок текста на главной странице*/
 .text-h1 {
+  width: 100vw;
   font-size: 48px;
   font-weight: bold;
   color: #ffffff;
