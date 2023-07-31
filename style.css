@@ -160,9 +160,9 @@ table {
   border-collapse: collapse;
   /*убираем пустые промежутки между ячейками*/
   /* background: rgb(184, 194, 216); */
-  /*width: auto;
+  width: auto;
   height: auto;
-  display: inline-block;-------------------------------------------------------------------------*/
+  display: inline-block;
 }
 
 .table-headers {
@@ -239,6 +239,7 @@ input[type=text] { /* результат в таблице */
   text-align: center;
   font-weight: bolder;
   border: 0px;
+  margin: auto;
   padding: 0px 0px 0px 0px;
 }
 
