@@ -184,8 +184,6 @@ th {
 td {
   border: 1px solid rgb(0, 0, 0);
   /* Рамка вокруг таблицы */
-  margin: auto;
-  /*Выравниваем таблицу по центру окна*/
 }
 
 
@@ -240,7 +238,6 @@ input[type=text] { /* результат в таблице */
   font-weight: bolder;
   border: 0px;
   margin: auto;
-  padding: 0px 0px 0px 0px;
 }
 
 input[value="C"] { /* С */
