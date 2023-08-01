@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Список товаров с выбором количества</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .quantity-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .quantity-wrapper input[type="number"] {
+      margin-right: 10px;
+    }
+    .quantity-wrapper button {
+      font-size: 14px;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Список товаров</h1>
+  <ul id="productList">
+    <li>
+      <span>Товар 1 - Цена: $10</span>
+      <div class="quantity-wrapper">
+        <button class="decrement" data-price="10">-</button>
+        <input type="number" min="0" value="0" data-price="10">
+        <button class="increment" data-price="10">+</button>
+      </div>
+    </li>
+    <li>
+      <span>Товар 2 - Цена: $15</span>
+      <div class="quantity-wrapper">
+        <button class="decrement" data-price="15">-</button>
+        <input type="number" min="0" value="0" data-price="15">
+        <button class="increment" data-price="15">+</button>
+      </div>
+    </li>
+    <li>
+      <span>Товар 3 - Цена: $20</span>
+      <div class="quantity-wrapper">
+        <button class="decrement" data-price="20">-</button>
+        <input type="number" min="0" value="0" data-price="20">
+        <button class="increment" data-price="20">+</button>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Выбранные товары:</h2>
+  <ul id="cart"></ul>
+
+  <p id="total">Общая сумма: $0</p>
+
+  <script>
+    // Функция для обновления общей суммы и списка выбранных товаров
+    function updateCart() {
+      const cart = document.getElementById("cart");
+      const cartItems = cart.getElementsByTagName("li");
+      let total = 0;
+
+      while (cartItems.length > 0) {
+        cartItems[0].remove();
+      }
+
+      const productList = document.getElementById("productList");
+      const productItems = productList.getElementsByTagName("li");
+
+      for (let i = 0; i < productItems.length; i++) {
+        const quantity = parseInt(productItems[i].querySelector("input").value);
+        if (quantity > 0) {
+          const productName = productItems[i].querySelector("span").textContent;
+          const productPrice = parseInt(productItems[i].querySelector("input").getAttribute("data-price"));
+          const itemTotal = quantity * productPrice;
+          total += itemTotal;
+
+          const cartItem = document.createElement("li");
+          cartItem.textContent = `${productName} - Количество: ${quantity} - Сумма: $${itemTotal}`;
+          cart.appendChild(cartItem);
+        }
+      }
+
+      const totalElement = document.getElementById("total");
+      totalElement.textContent = `Общая сумма: $${total}`;
+    }
+
+    // Обновляем список выбранных товаров при изменении количества товаров
+    const quantityInputs = document.querySelectorAll("input");
+    quantityInputs.forEach(input => {
+      input.addEventListener("change", updateCart);
+    });
+
+    // Добавляем функциональность для кнопок "+" и "-"
+    const incrementButtons = document.querySelectorAll(".increment");
+    const decrementButtons = document.querySelectorAll(".decrement");
+
+    incrementButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const input = button.parentElement.querySelector("input");
+        input.stepUp();
+        updateCart();
+      });
+    });
+
+    decrementButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const input = button.parentElement.querySelector("input");
+        input.stepDown();
+        updateCart();
+      });
+    });
+  </script>
+</body>
+</html>
