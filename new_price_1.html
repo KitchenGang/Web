@@ -7,7 +7,7 @@
 <body>
   <h1>Выбранные товары</h1>
   <ul id="selectedItems"></ul>
-  <p id="totalAmount">Общая сумма: $0</p>
+  <p id="totalAmount">Общая сумма: 0</p>
 
   <script>
     // Получаем данные о выбранных товарах из localStorage
@@ -23,14 +23,14 @@
       selectedItemsList.appendChild(cartItem);
 
       // Вычисляем общую сумму выбранных товаров
-      const itemTotalMatch = item.match(/Сумма: \$([0-9]+)/);
+      const itemTotalMatch = item.match(/Сумма: ([0-9]+)/);
       if (itemTotalMatch) {
         totalAmount += parseInt(itemTotalMatch[1]);
       }
     });
 
     const totalAmountElement = document.getElementById("totalAmount");
-    totalAmountElement.textContent = `Общая сумма: $${totalAmount}`;
+    totalAmountElement.textContent = `Общая сумма: ${totalAmount}`;
 
     // Очищаем данные о выбранных товарах из localStorage после отображения
     localStorage.removeItem("cartData");

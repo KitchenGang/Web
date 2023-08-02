@@ -3,7 +3,7 @@
 <head>
   <title>Список товаров с выбором количества</title>
   <style>
-    ul {
+    /*ul {
 
     }
     li {
@@ -17,7 +17,7 @@
     }
     .quantity-wrapper button {
 
-    }
+    }*/
   </style>
   
 </head>
@@ -25,7 +25,7 @@
   <h1>Список товаров</h1>
   <ul id="productList">
     <li>
-      <span>Товар 1 - Цена: $10</span>
+      <span>Товар 1 - Цена: 10</span>
       <div>
         <button class="decrement" data-price="10">-</button>
         <input type="number" min="0" value="0" data-price="10">
@@ -33,7 +33,7 @@
       </div>
     </li>
     <li>
-      <span>Товар 2 - Цена: $15</span>
+      <span>Товар 2 - Цена: 15</span>
       <div>
         <button class="decrement" data-price="15">-</button>
         <input type="number" min="0" value="0" data-price="15">
@@ -41,7 +41,7 @@
       </div>
     </li>
     <li>
-      <span>Товар 3 - Цена: $20</span>
+      <span>Товар 3 - Цена: 20</span>
       <div>
         <button class="decrement" data-price="20">-</button>
         <input type="number" min="0" value="0" data-price="20">
@@ -53,7 +53,7 @@
   <h2>Выбранные товары:</h2>
   <ul id="cart"></ul>
 
-  <p id="total">Общая сумма: $0</p>
+  <p id="total">Общая сумма: 0</p>
 
 
   <button id="viewCartButton">Перейти к выбранным товарам</button>
@@ -81,13 +81,13 @@
           total += itemTotal;
 
           const cartItem = document.createElement("li");
-          cartItem.textContent = `${productName} - Количество: ${quantity} - Сумма: $${itemTotal}`;
+          cartItem.textContent = `${productName} Количество: ${quantity} Сумма: ${itemTotal}`;
           cart.appendChild(cartItem);
         }
       }
 
       const totalElement = document.getElementById("total");
-      totalElement.textContent = `Общая сумма: $${total}`;
+      totalElement.textContent = `Общая сумма: ${total}`;
     }
 
     // Обновляем список выбранных товаров при изменении количества товаров
@@ -132,7 +132,7 @@
       localStorage.setItem("cartData", JSON.stringify(cartData));
 
       // Перенаправляем пользователя на новую страницу
-      window.location.href = "cart.html";
+      window.location.href = "new_price_1.html";
     });
   </script>
 </body>
