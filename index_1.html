@@ -4,23 +4,19 @@
   <title>Список товаров с выбором количества</title>
   <style>
     ul {
-      list-style-type: none;
-      padding: 0;
+
     }
     li {
-      margin-bottom: 10px;
+
     }
     .quantity-wrapper {
-      display: flex;
-      align-items: center;
+
     }
     .quantity-wrapper input[type="number"] {
-      margin-right: 10px;
+
     }
     .quantity-wrapper button {
-      font-size: 14px;
-      padding: 4px 8px;
-      cursor: pointer;
+
     }
   </style>
   
@@ -30,7 +26,7 @@
   <ul id="productList">
     <li>
       <span>Товар 1 - Цена: $10</span>
-      <div class="quantity-wrapper">
+      <div>
         <button class="decrement" data-price="10">-</button>
         <input type="number" min="0" value="0" data-price="10">
         <button class="increment" data-price="10">+</button>
@@ -38,7 +34,7 @@
     </li>
     <li>
       <span>Товар 2 - Цена: $15</span>
-      <div class="quantity-wrapper">
+      <div>
         <button class="decrement" data-price="15">-</button>
         <input type="number" min="0" value="0" data-price="15">
         <button class="increment" data-price="15">+</button>
@@ -46,7 +42,7 @@
     </li>
     <li>
       <span>Товар 3 - Цена: $20</span>
-      <div class="quantity-wrapper">
+      <div>
         <button class="decrement" data-price="20">-</button>
         <input type="number" min="0" value="0" data-price="20">
         <button class="increment" data-price="20">+</button>
@@ -58,6 +54,9 @@
   <ul id="cart"></ul>
 
   <p id="total">Общая сумма: $0</p>
+
+
+  <button id="viewCartButton">Перейти к выбранным товарам</button>
 
   <script>
     // Функция для обновления общей суммы и списка выбранных товаров
@@ -115,6 +114,25 @@
         input.stepDown();
         updateCart();
       });
+    });
+
+
+
+
+
+    // Добавляем обработчик для кнопки "Перейти к выбранным товарам"
+    const viewCartButton = document.getElementById("viewCartButton");
+    viewCartButton.addEventListener("click", () => {
+      // Сохраняем выбранные товары в localStorage
+      const cartItems = document.querySelectorAll("#cart li");
+      const cartData = [];
+      cartItems.forEach(item => {
+        cartData.push(item.textContent);
+      });
+      localStorage.setItem("cartData", JSON.stringify(cartData));
+
+      // Перенаправляем пользователя на новую страницу
+      window.location.href = "cart.html";
     });
   </script>
 </body>
