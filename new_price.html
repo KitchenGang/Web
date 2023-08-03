@@ -2,60 +2,104 @@
 <html>
 <head>
   <title>Список товаров с выбором количества</title>
-  <style>
-    /*ul {
+  
+<style>
+  
+  input[type="number"] {
+    text-align: center;
+    border: 0px;
+    padding: 0px 10px;
+    width: 30px; /* Установите минимальную ширину для поля ввода */
+    transition: width 0.3s; /* Добавим плавное изменение ширины */
+  }
 
-    }
-    li {
+  input[type="number"]:focus {
+    width: 100px; /* Ширина поля ввода при активации (когда находится в фокусе) */
+  }
 
-    }
-    .quantity-wrapper {
 
-    }
-    .quantity-wrapper input[type="number"] {
+  /* Добавим стили для плейсхолдера (текста, отображаемого в пустом поле ввода) */
+  input[type="number"]::placeholder {
+    text-align: center;
+  }
 
-    }
-    .quantity-wrapper button {
+  /* Скрытие стрелок в поле ввода типа "number" */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Для WebKit (Chrome, Safari, Opera) */
+    margin: 0; /* Убираем отступы */
+  }
 
-    }*/
-  </style>
+  /*
+  input[type="number"] {
+    -moz-appearance: textfield; /* Для Firefox 
+  } 
+  
+  */
+
+
+
+  input[type="number"]::-moz-inner-spin-button,
+  input[type="number"]::-moz-outer-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+  }
+  
+</style>
   
 </head>
 <body>
-  <h1>Список товаров</h1>
+  <h1>ПРАЙС</h1>
+
+  <p><button onclick="window.location.href='index.html'" class="homepage_button">главная</button></p>
+
   <ul id="productList">
+
     <li>
-      <span>Товар 1 - Цена: 10</span>
-      <div>
-        <button class="decrement" data-price="10">-</button>
-        <input type="number" min="0" value="0" data-price="10">
-        <button class="increment" data-price="10">+</button>
-      </div>
+      <span>Сборка и установка кухонного каркаса 650р шт</span>
+      <br>
+      <span>
+        <button class="decrement" data-price="650">-</button>
+        <input type="number" min="0" value="0" data-price="650"> 
+        <button class="increment" data-price="650">+</button>
+        <br>
+        <span class="item-total">Сумма: 0</span>
+      </span>
     </li>
+    <br>
     <li>
-      <span>Товар 2 - Цена: 15</span>
-      <div>
-        <button class="decrement" data-price="15">-</button>
-        <input type="number" min="0" value="0" data-price="15">
-        <button class="increment" data-price="15">+</button>
-      </div>
+      <span>Сборка и установка колонны 1000р шт</span>
+      <br>
+      <span>
+        <button class="decrement" data-price="1000">-</button>
+        <input type="number" min="0" value="0" data-price="1000">
+        <button class="increment" data-price="1000">+</button>
+        <br>
+        <span class="item-total">Сумма: 0</span>
+      </span>
     </li>
+    <br>
     <li>
-      <span>Товар 3 - Цена: 20</span>
-      <div>
-        <button class="decrement" data-price="20">-</button>
-        <input type="number" min="0" value="0" data-price="20">
-        <button class="increment" data-price="20">+</button>
-      </div>
+      <span>Уменьшение глубины / высоты / ширины шкафа 800р шт</span>
+      <br>
+      <span>
+        <button class="decrement" data-price="800">-</button>
+        <input type="number" min="0" value="0" data-price="800"> 
+        <button class="increment" data-price="800">+</button>
+        <br>
+        <span class="item-total">Сумма: 0</span>
+      </span>
     </li>
+    <br>
+
   </ul>
 
   <h2>Выбранные товары:</h2>
+
   <ul id="cart"></ul>
 
-  <p id="total">Общая сумма: 0</p>
-
-
+  <p id="total">ИТОГ 0</p>
+  
   <button id="viewCartButton">Перейти к выбранным товарам</button>
 
   <script>
@@ -80,9 +124,13 @@
           const itemTotal = quantity * productPrice;
           total += itemTotal;
 
+          productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal}`;
+
           const cartItem = document.createElement("li");
           cartItem.textContent = `${productName} Количество: ${quantity} Сумма: ${itemTotal}`;
           cart.appendChild(cartItem);
+        } else {
+          productItems[i].querySelector(".item-total").textContent = `Сумма: 0`;
         }
       }
 
@@ -134,6 +182,7 @@
       // Перенаправляем пользователя на новую страницу
       window.location.href = "new_price_1.html";
     });
+    
   </script>
 </body>
 </html>
