@@ -4,6 +4,11 @@
   <title>Список товаров с выбором количества</title>
   
 <style>
+
+.text {
+  font-size: 25px; /* Размер текста в пикселях */
+}
+
   
   input[type="number"] {
     text-align: center;
@@ -44,6 +49,34 @@
     -moz-appearance: none;
     margin: 0;
   }
+
+
+
+  .highlighted-text {
+  position: relative;
+  display: inline-block;
+  padding: 1px 300px; /* Регулируйте вертикальное расстояние */
+}
+
+.highlighted-text::before,
+.highlighted-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* Высота полос сверху и снизу */
+  background-color: #d3d3d3; /* Светло-серый цвет */
+}
+
+.highlighted-text::before {
+  top: 0px; /* Расстояние сверху */
+}
+
+.highlighted-text::after {
+  bottom: 0px; /* Расстояние снизу */
+}
+
+
   
 </style>
   
@@ -56,51 +89,54 @@
   <ul id="productList">
 
     <li>
-      <span>Сборка и установка кухонного каркаса 650р шт</span>
+      <span class="highlighted-text"><p class="text">Сборка и установка кухонного каркаса - 650р</p></span>
+      <br>
       <br>
       <span>
         <button class="decrement" data-price="650">-</button>
         <input type="number" min="0" value="0" data-price="650"> 
         <button class="increment" data-price="650">+</button>
-        <br>
         <span class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
+    <br>
     <li>
-      <span>Сборка и установка колонны 1000р шт</span>
+      <span class="highlighted-text"><p class="text">Сборка и установка колонны - 1000р</p></span>
+      <br>
       <br>
       <span>
         <button class="decrement" data-price="1000">-</button>
         <input type="number" min="0" value="0" data-price="1000">
         <button class="increment" data-price="1000">+</button>
-        <br>
         <span class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
+    <br>
     <li>
-      <span>Уменьшение глубины / высоты / ширины шкафа 800р шт</span>
+      <span class="highlighted-text"><p class="text">Уменьшение глубины / высоты / ширины шкафа - 800р</p></span>
+      <br>
       <br>
       <span>
         <button class="decrement" data-price="800">-</button>
         <input type="number" min="0" value="0" data-price="800"> 
         <button class="increment" data-price="800">+</button>
-        <br>
         <span class="item-total">Сумма: 0</span>
       </span>
     </li>
+    <br>
     <br>
 
   </ul>
 
   <h2>Выбранные товары:</h2>
 
-  <ul id="cart"></ul>
+  <ul class="text" id="cart"></ul>
 
-  <p id="total">ИТОГ 0</p>
+  <p class="text" id="total">ИТОГ 0</p>
   
-  <button id="viewCartButton">Перейти к выбранным товарам</button>
+  <button class="text" id="viewCartButton">Перейти к выбранным товарам</button>
 
   <script>
     // Функция для обновления общей суммы и списка выбранных товаров
