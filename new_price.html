@@ -5,23 +5,79 @@
   
 <style>
 
-.text {
-  font-size: 25px; /* Размер текста в пикселях */
+  .total{
+    font-size: 30px;
+}
+  .but{
+    font-size: 15px;
+    padding: 10px;
+}
+  .cart{
+    font-size: 20px;
+}
+
+.body {
+    text-align: center;
+  }
+
+  .price {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+  }
+
+  .text {
+    font-size: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      
+}
+
+.highlighted-text {
+  /*margin-left: auto;
+  margin-right: auto;*/
+  position: relative;
+  display: inline-block;
+  /*padding: 0px 0px; /* Регулируйте вертикальное расстояние */  
+}
+
+.highlighted-text::before,
+.highlighted-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* Высота полос сверху и снизу */
+  background-color: #d3d3d3; /* Светло-серый цвет */
+}
+
+.highlighted-text::before {
+  top: 0px; /* Расстояние сверху */
+}
+
+.highlighted-text::after {
+  bottom: 0px; /* Расстояние снизу */
 }
 
   
-  input[type="number"] {
+  .quantity {
+    font-size: 30px;
     text-align: center;
     border: 0px;
-    padding: 0px 10px;
-    width: 30px; /* Установите минимальную ширину для поля ввода */
-    transition: width 0.3s; /* Добавим плавное изменение ширины */
+    width: 100px;
   }
 
-  input[type="number"]:focus {
-    width: 100px; /* Ширина поля ввода при активации (когда находится в фокусе) */
+  .arrows {
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 20px;
+
   }
 
+  ul {
+  list-style-type: none;
+}
 
   /* Добавим стили для плейсхолдера (текста, отображаемого в пустом поле ввода) */
   input[type="number"]::placeholder {
@@ -51,38 +107,25 @@
   }
 
 
-
-  .highlighted-text {
-  position: relative;
-  display: inline-block;
-  padding: 1px 300px; /* Регулируйте вертикальное расстояние */
+#size {
+  font-size: 25px;
+ padding: 0px 0px 0px 80px;
 }
 
-.highlighted-text::before,
-.highlighted-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px; /* Высота полос сверху и снизу */
-  background-color: #d3d3d3; /* Светло-серый цвет */
-}
 
-.highlighted-text::before {
-  top: 0px; /* Расстояние сверху */
-}
 
-.highlighted-text::after {
-  bottom: 0px; /* Расстояние снизу */
-}
+
+
 
 
   
 </style>
   
 </head>
-<body>
-  <h1>ПРАЙС</h1>
+
+<body class="body">
+
+  <span><h1 class="price">ПРАЙС</h1></span>
 
   <p><button onclick="window.location.href='index.html'" class="homepage_button">главная</button></p>
 
@@ -93,10 +136,10 @@
       <br>
       <br>
       <span>
-        <button class="decrement" data-price="650">-</button>
-        <input type="number" min="0" value="0" data-price="650"> 
-        <button class="increment" data-price="650">+</button>
-        <span class="item-total">Сумма: 0</span>
+        <button class="decrement" data-price="650"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" min="0" value="0" data-price="650"> 
+        <button class="increment" data-price="650"><span class="arrows">+</span></button>
+        <span id="size" class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
@@ -106,10 +149,10 @@
       <br>
       <br>
       <span>
-        <button class="decrement" data-price="1000">-</button>
-        <input type="number" min="0" value="0" data-price="1000">
-        <button class="increment" data-price="1000">+</button>
-        <span class="item-total">Сумма: 0</span>
+        <button class="decrement" data-price="1000"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" min="0" value="0" data-price="1000">
+        <button class="increment" data-price="1000"><span class="arrows">+</span></button>
+        <span id="size" class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
@@ -119,10 +162,10 @@
       <br>
       <br>
       <span>
-        <button class="decrement" data-price="800">-</button>
-        <input type="number" min="0" value="0" data-price="800"> 
-        <button class="increment" data-price="800">+</button>
-        <span class="item-total">Сумма: 0</span>
+        <button class="decrement" data-price="800"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" min="0" value="0" data-price="800"> 
+        <button class="increment" data-price="800"><span class="arrows">+</span></button>
+        <span id="size"class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
@@ -132,11 +175,18 @@
 
   <h2>Выбранные товары:</h2>
 
-  <ul class="text" id="cart"></ul>
+  <div class="cart"><ul id="cart"></ul></div>
 
-  <p class="text" id="total">ИТОГ 0</p>
+  <p class="total" id="total">ИТОГ 0</p>
+
+  <p class="total" id=""></p>
   
-  <button class="text" id="viewCartButton">Перейти к выбранным товарам</button>
+  <button class="but" id="viewCartButton">Перейти к выбранным товарам</button>
+
+
+
+
+
 
   <script>
     // Функция для обновления общей суммы и списка выбранных товаров
