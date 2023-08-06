@@ -1,78 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Список товаров с выбором количества</title>
+  <head>
+    <title>Список товаров с выбором количества</title>
+  </head>
   
-<style>
+  <style>
+
+  .homepage_button {
+      font-size: 15px;
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 8px 15px;
+      background-color: #4d4d4d;
+      border-radius: 5px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .homepage_button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      opacity: 0.1;
+      transition: left 0.3s ease;
+  }
+
+  .homepage_button:hover::before {
+      left: 100%;
+  }
+
+  .homepage_button:hover {
+      background-color: #474747c9;
+      transform: translateY(-2px);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  }
 
   .body {
+    user-select: none;
+    background-color: rgba(160, 164, 182, 0.788); /* Цвет фона */
     text-align: center;
   }
-  .text {
-    font-size: 40px;
-  }
-  .total{
-    font-size: 30px;
-  }
-  .cart{
-    font-size: 20px;
-  }
-  .price {
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em
-  }
-  .highlighted-text {
-    /*margin-left: auto;
-    margin-right: auto;*/
-    position: relative;
-    display: inline-block;
-    /*padding: 0px 0px; /* Регулируйте вертикальное расстояние */  
-  }
-
-  .highlighted-text::before,
-  .highlighted-text::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px; /* Высота полос сверху и снизу */
-    background-color: #d3d3d3; /* Светло-серый цвет */
-  }
-
-  .highlighted-text::before {
-    top: 0px; /* Расстояние сверху */
-  }
-
-  .highlighted-text::after {
-    bottom: 0px; /* Расстояние снизу */
-  }
-
   
+  .background-div {
+  background: linear-gradient(to bottom, #62b0e4, #9ce0ec);
+  border-bottom: 5px solid #000000;
+  padding-bottom: 5px;
+  border-top: 5px solid #000000;
+  padding-top: 5px;
+  border-left: 5px solid #000000;
+  padding-left: 5px;
+  border-right: 5px solid #000000;
+  border-radius: 25px;
+  padding: 0px 0px 15px 0px;
+  }
+
+  .text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    padding: 0px 0px 0px 0px;
+    
+  }
+
   .quantity {
-    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: #4212b1;
     text-align: center;
-    border: 0px;
     width: 100px;
+    border: 0px;
+    background: none;
+    white-space: nowrap;
+  }
+  
+  .arrows {
+    font-family: Arial, Helvetica, sans-serif, Times, serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #000000;
+    padding: 0px 50px;
+    background-color: #4d4d4d;
+    border-radius: 10px;
+    white-space: nowrap;
   }
 
-  .arrows {
+  button[name="+ and -"] {
+    background: none;
+    border: 0px;
+    white-space: nowrap;
+  }
+
+  #sum {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: #4212b1;
+    padding: 0px 0px 0px 100px;
+  }
+
+  .total-button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     text-align: center;
-    padding: 0px 20px;
-
+    padding: 5px 20px;
+    background-color: #484ae0;
+    border-radius: 5px;
+    white-space: nowrap;
   }
 
-  #size {
+  .total {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: #000000;
+  }
+
+  .reset-button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
-    padding: 0px 0px 0px 80px;
+    text-align: center;
+    padding: 5px 20px;
+    background-color: #484ae0;
+    border-radius: 5px;
+    white-space: nowrap;
   }
-
+  
   ul {
     list-style-type: none;
-  } 
-
+  }
+  
   /* Добавим стили для плейсхолдера (текста, отображаемого в пустом поле ввода) */
   input[type="number"]::placeholder {
     text-align: center;
@@ -97,85 +156,69 @@
     margin: 0;
   }
 
-
-
-
-
-
-
-
-
-
-  
 </style>
   
-</head>
-
 <body class="body">
 
   <span><h1 class="price">ПРАЙС</h1></span>
 
-  <p><button onclick="window.location.href='index.html'" class="homepage_button">главная</button></p>
+  <button class="homepage_button" onclick="window.location.href='index.html'">главная</button>
 
   <ul id="productList">
 
+  <div class="background-div">
     <li>
       <span class="highlighted-text"><p class="text">Сборка и установка кухонного каркаса - 650р</p></span>
-      <br>
-      <br>
       <span>
-        <button class="decrement" data-price="650"><span class="arrows">-</span></button>
-        <input class="quantity" type="number" min="0" value="0" data-price="650"> 
-        <button class="increment" data-price="650"><span class="arrows">+</span></button>
-        <span id="size" class="item-total">Сумма: 0</span>
+        <button name="+ and -" class="decrement" data-price="650"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="650"> 
+        <button name="+ and -" class="increment" data-price="650"><span class="arrows">+</span></button>
+        <span id="sum" class="item-total">Сумма: 0</span>
       </span>
     </li>
-    <br>
-    <br>
+  </div>
+
+  <br>
+
+  <div class="background-div">
     <li>
       <span class="highlighted-text"><p class="text">Сборка и установка колонны - 1000р</p></span>
-      <br>
-      <br>
       <span>
-        <button class="decrement" data-price="1000"><span class="arrows">-</span></button>
-        <input class="quantity" type="number" min="0" value="0" data-price="1000">
-        <button class="increment" data-price="1000"><span class="arrows">+</span></button>
-        <span id="size" class="item-total">Сумма: 0</span>
+        <button name="+ and -" class="decrement" data-price="1000"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="1000">
+        <button name="+ and -" class="increment" data-price="1000"><span class="arrows">+</span></button>
+        <span id="sum" class="item-total">Сумма: 0</span>
       </span>
     </li>
-    <br>
-    <br>
+  </div>
+
+  <br>
+
+  <div class="background-div">
     <li>
       <span class="highlighted-text"><p class="text">Уменьшение глубины / высоты / ширины шкафа - 800р</p></span>
-      <br>
-      <br>
       <span>
-        <button class="decrement" data-price="800"><span class="arrows">-</span></button>
-        <input class="quantity" type="number" min="0" value="0" data-price="800"> 
-        <button class="increment" data-price="800"><span class="arrows">+</span></button>
-        <span id="size"class="item-total">Сумма: 0</span>
+        <button name="+ and -" class="decrement" data-price="800"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="800"> 
+        <button name="+ and -" class="increment" data-price="800"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
       </span>
     </li>
-    <br>
-    <br>
+  </div>
+
   </ul>
 
   <!--<h2>Выбранные товары:</h2>-->
-  <button id="resetButton">Сбросить все</button>
-
   <div style="display: none;" class="cart"><ul id="cart"></ul></div>
-
-  <p class="total" id="total">ИТОГ 0</p>
   
-  <button class="button_total" id="viewCartButton">Перейти к выбранным товарам</button>
-
-
-
-
-
-
+  <div><button class="total-button" id="viewCartButton">Перейти к выбранным товарам</button></div>
+  
+  <p class="total" id="total">ИТОГ: 0</p>
+  
+  <div><button class="reset-button" id="resetButton">Сбросить все</button></div>
 
   <script>
+
     // Функция для обновления общей суммы и списка выбранных товаров
     function updateCart() {
       const cart = document.getElementById("cart");
@@ -208,7 +251,7 @@
       }
 
       const totalElement = document.getElementById("total");
-      totalElement.textContent = `Общая сумма: ${total}`;
+      totalElement.textContent = `ИТОГ: ${total}`;
     }
 
     // Обновляем список выбранных товаров при изменении количества товаров
@@ -262,36 +305,16 @@
       });
       // Обновляем корзину и общую сумму
       updateCart();
-
-
-
-
-
-
-
-      viewCartButton.addEventListener("click", () => {
-  const cartItems = document.querySelectorAll("#cart li");
-  const cartData = [];
-  cartItems.forEach(item => {
-    cartData.push(item.textContent);
-  });
-  const totalValue = document.getElementById("total").textContent;
-
-  // Сохраняем данные в куки
-  document.cookie = `cartData=${JSON.stringify(cartData)}`;
-  document.cookie = `totalValue=${totalValue}`;
-
-  // Переходим на новую страницу
-  window.location.href = "new_price_1.html";
-});
-
-
-
-
-
-
-
+    
     });
+
+    const noNumbersInput = document.getElementById('noNumbersInput');
+    noNumbersInput.addEventListener('keydown', function(event) {
+      if (event.key >= '0' && event.key <= '9') {
+        event.preventDefault(); // Предотвращаем ввод цифр
+      }
+    });
+
     
   </script>
 </body>

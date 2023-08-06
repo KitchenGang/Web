@@ -3,13 +3,94 @@
 <head>
   <title>Выбранные товары</title>
 </head>
-<body>
 
-  <p><button onclick="window.location.href='index.html'">главная</button></p>
+<style>
+
+  .homepage_button {
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+    }
+  
+  .homepage_button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.1;
+  transition: left 0.3s ease;
+  }
+  
+  .homepage_button:hover::before {
+  left: 100%;
+  }
+  
+  .homepage_button:hover {
+  background-color: #474747c9;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .body {
+    user-select: none;
+    text-align: center;
+    background-color: rgb(178, 243, 243); /* Цвет фона */
+  }
+
+  h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+  }
+
+  .table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    width: auto;
+  }
+
+  tr {
+  background-color: rgb(182, 230, 230); /* Цвет фона */
+  }
+
+  td, th {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+
+   p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+   }
+
+  </style>
+
+<body class="body">
+
+  <p><button class="homepage_button" onclick="window.location.href='new_price.html'">назад</button></p>
   
   <h1>Выбранные товары</h1>
   
-  <table>
+<div class="table-container">
+  <table class="styled-table">
+    
     <thead>
       <tr>
         <th>Товар</th>
@@ -18,60 +99,18 @@
         <th>Сумма</th>
       </tr>
     </thead>
-    <tbody id="selectedItems"></tbody>
+    
+    <tbody id="selectedItems">
+    </tbody>
   </table>
+</div>  
   
-  <p id="totalAmount">ИТОГ: 0</p>
+  <div>
+    <p id="totalAmount">ИТОГ: 0</p>
+  </div>
 
   <script>
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Получаем значения из кук
-  const cartDataCookie = getCookie("cartData");
-  const totalValueCookie = getCookie("totalValue");
-
-  if (cartDataCookie) {
-    const cart = document.getElementById("cart");
-    const cartData = JSON.parse(cartDataCookie);
-    cartData.forEach(item => {
-      const cartItem = document.createElement("li");
-      cartItem.textContent = item;
-      cart.appendChild(cartItem);
-    });
-  }
-
-  if (totalValueCookie) {
-    const totalElement = document.getElementById("total");
-    totalElement.textContent = totalValueCookie;
-  }
-});
-
-// Функция для получения значения из кук
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(";").shift();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
     // Получаем данные о выбранных товарах из localStorage
     const cartData = JSON.parse(localStorage.getItem("cartData"));
     // Отображаем данные о выбранных товарах на странице
@@ -86,7 +125,7 @@ function getCookie(name) {
       const itemTotal = cartItemParts[cartItemParts.length - 1];
 
       const row = document.createElement("tr");
-      row.innerHTML = `<td>${productName}</td><td>${price}</td><td>${quantity}</td><td>${itemTotal}</td>`;
+      row.innerHTML = `<td>${productName} </td><td>${price}</td><td>${quantity}шт</td><td>${itemTotal}р</td>`;
       selectedItemsTable.appendChild(row);
 
       // Вычисляем общую сумму выбранных товаров
