@@ -1,39 +1,105 @@
-<!-- Новая страница -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Выбранные товары</title>
 </head>
 <body>
+
+  <p><button onclick="window.location.href='index.html'">главная</button></p>
+  
   <h1>Выбранные товары</h1>
-  <ul id="selectedItems"></ul>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Товар</th>
+        <th>Цена</th>
+        <th>Количество</th>
+        <th>Сумма</th>
+      </tr>
+    </thead>
+    <tbody id="selectedItems"></tbody>
+  </table>
+  
   <p id="totalAmount">ИТОГ: 0</p>
 
   <script>
-    // Получаем данные о выбранных товарах из localStorage
-    const cartData = JSON.parse(localStorage.getItem("cartData"));
 
-    // Отображаем данные о выбранных товарах на странице
-    const selectedItemsList = document.getElementById("selectedItems");
-    let totalAmount = 0;
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем значения из кук
+  const cartDataCookie = getCookie("cartData");
+  const totalValueCookie = getCookie("totalValue");
+
+  if (cartDataCookie) {
+    const cart = document.getElementById("cart");
+    const cartData = JSON.parse(cartDataCookie);
     cartData.forEach(item => {
       const cartItem = document.createElement("li");
       cartItem.textContent = item;
-      selectedItemsList.appendChild(cartItem);
+      cart.appendChild(cartItem);
+    });
+  }
+
+  if (totalValueCookie) {
+    const totalElement = document.getElementById("total");
+    totalElement.textContent = totalValueCookie;
+  }
+});
+
+// Функция для получения значения из кук
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Получаем данные о выбранных товарах из localStorage
+    const cartData = JSON.parse(localStorage.getItem("cartData"));
+    // Отображаем данные о выбранных товарах на странице
+    const selectedItemsTable = document.getElementById("selectedItems");
+      let totalAmount = 0;
+
+    cartData.forEach(item => {
+      const cartItemParts = item.split(' ');
+      const productName = cartItemParts.slice(0, -6).join(' ');
+      const price = cartItemParts[cartItemParts.length - 5];
+      const quantity = cartItemParts[cartItemParts.length - 3];
+      const itemTotal = cartItemParts[cartItemParts.length - 1];
+
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${productName}</td><td>${price}</td><td>${quantity}</td><td>${itemTotal}</td>`;
+      selectedItemsTable.appendChild(row);
 
       // Вычисляем общую сумму выбранных товаров
-      const itemTotalMatch = item.match(/Сумма: ([0-9]+)/);
-      if (itemTotalMatch) {
-        totalAmount += parseInt(itemTotalMatch[1]);
-      }
+      totalAmount += parseInt(itemTotal);
     });
 
     const totalAmountElement = document.getElementById("totalAmount");
-    totalAmountElement.textContent = `Общая сумма: ${totalAmount}`;
-
+    totalAmountElement.textContent = `ИТОГ: ${totalAmount}`;
+    
     // Очищаем данные о выбранных товарах из localStorage после отображения
-    localStorage.removeItem("cartData");
+    //localStorage.removeItem("cartData");
+  
+  
   </script>
 </body>
 </html>

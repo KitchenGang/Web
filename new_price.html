@@ -8,17 +8,14 @@
   .body {
     text-align: center;
   }
-  .homepage_button{
-    font-size: 25px;
-  }
   .text {
     font-size: 40px;
   }
   .total{
-    font-size: 40px;
+    font-size: 30px;
   }
   .cart{
-    font-size: 40px;
+    font-size: 20px;
   }
   .price {
     font-size: 40px;
@@ -61,25 +58,17 @@
   }
 
   .arrows {
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
-    padding: 0px 45px;
-    border: none;
+    padding: 0px 20px;
+
   }
 
-  #sum {
-    font-size: 40px;
+  #size {
+    font-size: 25px;
     padding: 0px 0px 0px 80px;
   }
-  .selected_item{
-    font-size: 100pxs;
-  }
 
-  .button_total{
-    font-size: 40px;
-    padding: 10px;
-    /*border: none;*/
-  }
   ul {
     list-style-type: none;
   } 
@@ -138,7 +127,7 @@
         <button class="decrement" data-price="650"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="650"> 
         <button class="increment" data-price="650"><span class="arrows">+</span></button>
-        <span id="sum" class="item-total">0</span>
+        <span id="size" class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
@@ -151,7 +140,7 @@
         <button class="decrement" data-price="1000"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="1000">
         <button class="increment" data-price="1000"><span class="arrows">+</span></button>
-        <span id="sum" class="item-total">0</span>
+        <span id="size" class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
@@ -164,23 +153,22 @@
         <button class="decrement" data-price="800"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="800"> 
         <button class="increment" data-price="800"><span class="arrows">+</span></button>
-        <span id="sum"class="item-total">0</span>
+        <span id="size"class="item-total">Сумма: 0</span>
       </span>
     </li>
     <br>
     <br>
-
   </ul>
 
-  <h2 class="selected_item">Выбранные товары:</h2>
+  <!--<h2>Выбранные товары:</h2>-->
+  <button id="resetButton">Сбросить все</button>
 
-  <div class="cart"><ul id="cart"></ul></div>
+  <div style="display: none;" class="cart"><ul id="cart"></ul></div>
 
   <p class="total" id="total">ИТОГ 0</p>
-
-  <p class="total" id=""></p>
   
   <button class="button_total" id="viewCartButton">Перейти к выбранным товарам</button>
+
 
 
 
@@ -209,13 +197,13 @@
           const itemTotal = quantity * productPrice;
           total += itemTotal;
 
-          productItems[i].querySelector(".item-total").textContent = `${itemTotal}`;
+          productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal}`;
 
           const cartItem = document.createElement("li");
           cartItem.textContent = `${productName} Количество: ${quantity} Сумма: ${itemTotal}`;
           cart.appendChild(cartItem);
         } else {
-          productItems[i].querySelector(".item-total").textContent = ` `;
+          productItems[i].querySelector(".item-total").textContent = `Сумма: 0`;
         }
       }
 
@@ -248,11 +236,8 @@
         updateCart();
       });
     });
-
-
-
-
-
+    
+    
     // Добавляем обработчик для кнопки "Перейти к выбранным товарам"
     const viewCartButton = document.getElementById("viewCartButton");
     viewCartButton.addEventListener("click", () => {
@@ -263,9 +248,49 @@
         cartData.push(item.textContent);
       });
       localStorage.setItem("cartData", JSON.stringify(cartData));
-
       // Перенаправляем пользователя на новую страницу
       window.location.href = "new_price_1.html";
+    });
+    
+    // Обработчик события для кнопки "Сбросить все"
+    const resetButton = document.getElementById("resetButton");
+    resetButton.addEventListener("click", () => {
+      // Обнуляем значения всех полей ввода
+      const quantityInputs = document.querySelectorAll("input.quantity");
+      quantityInputs.forEach(input => {
+        input.value = 0;
+      });
+      // Обновляем корзину и общую сумму
+      updateCart();
+
+
+
+
+
+
+
+      viewCartButton.addEventListener("click", () => {
+  const cartItems = document.querySelectorAll("#cart li");
+  const cartData = [];
+  cartItems.forEach(item => {
+    cartData.push(item.textContent);
+  });
+  const totalValue = document.getElementById("total").textContent;
+
+  // Сохраняем данные в куки
+  document.cookie = `cartData=${JSON.stringify(cartData)}`;
+  document.cookie = `totalValue=${totalValue}`;
+
+  // Переходим на новую страницу
+  window.location.href = "new_price_1.html";
+});
+
+
+
+
+
+
+
     });
     
   </script>
