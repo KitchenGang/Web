@@ -5,101 +5,103 @@
   
 <style>
 
-  .total{
-    font-size: 30px;
-}
-  .but{
-    font-size: 15px;
-    padding: 10px;
-}
-  .cart{
-    font-size: 20px;
-}
-
-.body {
+  .body {
     text-align: center;
   }
-
+  .homepage_button{
+    font-size: 25px;
+  }
+  .text {
+    font-size: 40px;
+  }
+  .total{
+    font-size: 40px;
+  }
+  .cart{
+    font-size: 40px;
+  }
   .price {
     font-size: 40px;
     margin-left: auto;
     margin-right: auto;
     width: 6em
   }
+  .highlighted-text {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    position: relative;
+    display: inline-block;
+    /*padding: 0px 0px; /* Регулируйте вертикальное расстояние */  
+  }
 
-  .text {
-    font-size: 25px;
-      margin-left: auto;
-      margin-right: auto;
-      
-}
+  .highlighted-text::before,
+  .highlighted-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px; /* Высота полос сверху и снизу */
+    background-color: #d3d3d3; /* Светло-серый цвет */
+  }
 
-.highlighted-text {
-  /*margin-left: auto;
-  margin-right: auto;*/
-  position: relative;
-  display: inline-block;
-  /*padding: 0px 0px; /* Регулируйте вертикальное расстояние */  
-}
+  .highlighted-text::before {
+    top: 0px; /* Расстояние сверху */
+  }
 
-.highlighted-text::before,
-.highlighted-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px; /* Высота полос сверху и снизу */
-  background-color: #d3d3d3; /* Светло-серый цвет */
-}
-
-.highlighted-text::before {
-  top: 0px; /* Расстояние сверху */
-}
-
-.highlighted-text::after {
-  bottom: 0px; /* Расстояние снизу */
-}
+  .highlighted-text::after {
+    bottom: 0px; /* Расстояние снизу */
+  }
 
   
   .quantity {
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     border: 0px;
     width: 100px;
   }
 
   .arrows {
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
-    padding: 0px 20px;
-
+    padding: 0px 45px;
+    border: none;
   }
 
+  #sum {
+    font-size: 40px;
+    padding: 0px 0px 0px 80px;
+  }
+  .selected_item{
+    font-size: 100pxs;
+  }
+
+  .button_total{
+    font-size: 40px;
+    padding: 10px;
+    /*border: none;*/
+  }
   ul {
-  list-style-type: none;
-}
+    list-style-type: none;
+  } 
 
   /* Добавим стили для плейсхолдера (текста, отображаемого в пустом поле ввода) */
   input[type="number"]::placeholder {
     text-align: center;
   }
 
-  /* Скрытие стрелок в поле ввода типа "number" */
+   /* Скрытие стрелок в поле ввода типа "number" */
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none; /* Для WebKit (Chrome, Safari, Opera) */
     margin: 0; /* Убираем отступы */
   }
 
-  /*
+   /*
   input[type="number"] {
     -moz-appearance: textfield; /* Для Firefox 
   } 
   
   */
-
-
-
   input[type="number"]::-moz-inner-spin-button,
   input[type="number"]::-moz-outer-spin-button {
     -moz-appearance: none;
@@ -107,10 +109,7 @@
   }
 
 
-#size {
-  font-size: 25px;
- padding: 0px 0px 0px 80px;
-}
+
 
 
 
@@ -139,7 +138,7 @@
         <button class="decrement" data-price="650"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="650"> 
         <button class="increment" data-price="650"><span class="arrows">+</span></button>
-        <span id="size" class="item-total">Сумма: 0</span>
+        <span id="sum" class="item-total">0</span>
       </span>
     </li>
     <br>
@@ -152,7 +151,7 @@
         <button class="decrement" data-price="1000"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="1000">
         <button class="increment" data-price="1000"><span class="arrows">+</span></button>
-        <span id="size" class="item-total">Сумма: 0</span>
+        <span id="sum" class="item-total">0</span>
       </span>
     </li>
     <br>
@@ -165,7 +164,7 @@
         <button class="decrement" data-price="800"><span class="arrows">-</span></button>
         <input class="quantity" type="number" min="0" value="0" data-price="800"> 
         <button class="increment" data-price="800"><span class="arrows">+</span></button>
-        <span id="size"class="item-total">Сумма: 0</span>
+        <span id="sum"class="item-total">0</span>
       </span>
     </li>
     <br>
@@ -173,7 +172,7 @@
 
   </ul>
 
-  <h2>Выбранные товары:</h2>
+  <h2 class="selected_item">Выбранные товары:</h2>
 
   <div class="cart"><ul id="cart"></ul></div>
 
@@ -181,7 +180,7 @@
 
   <p class="total" id=""></p>
   
-  <button class="but" id="viewCartButton">Перейти к выбранным товарам</button>
+  <button class="button_total" id="viewCartButton">Перейти к выбранным товарам</button>
 
 
 
@@ -210,13 +209,13 @@
           const itemTotal = quantity * productPrice;
           total += itemTotal;
 
-          productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal}`;
+          productItems[i].querySelector(".item-total").textContent = `${itemTotal}`;
 
           const cartItem = document.createElement("li");
           cartItem.textContent = `${productName} Количество: ${quantity} Сумма: ${itemTotal}`;
           cart.appendChild(cartItem);
         } else {
-          productItems[i].querySelector(".item-total").textContent = `Сумма: 0`;
+          productItems[i].querySelector(".item-total").textContent = ` `;
         }
       }
 
