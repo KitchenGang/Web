@@ -7,69 +7,32 @@
   <style>
 
   .homepage_button {
-      font-size: 15px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 13px;
       color: #ffffff;
-      text-align: center;
       text-transform: uppercase;
-      padding: 8px 15px;
+      text-align: center;
+      padding: 4px 20px;
       background-color: #4d4d4d;
       border-radius: 5px;
       border: none;
-      position: relative;
-      overflow: hidden;
   }
 
-  .homepage_button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-      opacity: 0.1;
-      transition: left 0.3s ease;
-  }
-
-  .homepage_button:hover::before {
-      left: 100%;
-  }
-
-  .homepage_button:hover {
-      background-color: #474747c9;
-      transform: translateY(-2px);
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
-  }
 
   .body {
     user-select: none;
-    background-color: rgba(160, 164, 182, 0.788); /* Цвет фона */
+    background-color: rgba(255, 255, 255, 0.788);
     text-align: center;
-  }
-  
-  .background-div {
-  background: linear-gradient(to bottom, #62b0e4, #9ce0ec);
-  border-bottom: 5px solid #000000;
-  padding-bottom: 5px;
-  border-top: 5px solid #000000;
-  padding-top: 5px;
-  border-left: 5px solid #000000;
-  padding-left: 5px;
-  border-right: 5px solid #000000;
-  border-radius: 25px;
-  padding: 0px 0px 15px 0px;
   }
 
   .text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-    padding: 0px 0px 0px 0px;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
   }
 
   .quantity {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     color: #4212b1;
     text-align: center;
     width: 100px;
@@ -81,9 +44,9 @@
   .arrows {
     font-family: Arial, Helvetica, sans-serif, Times, serif;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 30px;
     color: #000000;
-    padding: 0px 50px;
+    padding: 0px 30px;
     background-color: #4d4d4d;
     border-radius: 10px;
     white-space: nowrap;
@@ -160,15 +123,12 @@
   
 <body class="body">
 
-  <span><h1 class="price">ПРАЙС</h1></span>
-
   <button class="homepage_button" onclick="window.location.href='index.html'">главная</button>
 
   <ul id="productList">
 
-  <div class="background-div">
     <li>
-      <span class="highlighted-text"><p class="text">Сборка и установка кухонного каркаса - 650р</p></span>
+      <span><p class="text">Сборка и установка кухонного каркаса - 650р</p></span>
       <span>
         <button name="+ and -" class="decrement" data-price="650"><span class="arrows">-</span></button>
         <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="650"> 
@@ -176,13 +136,9 @@
         <span id="sum" class="item-total">Сумма: 0</span>
       </span>
     </li>
-  </div>
-
   <br>
-
-  <div class="background-div">
     <li>
-      <span class="highlighted-text"><p class="text">Сборка и установка колонны - 1000р</p></span>
+      <span><p class="text">Сборка и установка колонны - 1000р</p></span>
       <span>
         <button name="+ and -" class="decrement" data-price="1000"><span class="arrows">-</span></button>
         <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="1000">
@@ -190,13 +146,9 @@
         <span id="sum" class="item-total">Сумма: 0</span>
       </span>
     </li>
-  </div>
-
   <br>
-
-  <div class="background-div">
     <li>
-      <span class="highlighted-text"><p class="text">Уменьшение глубины / высоты / ширины шкафа - 800р</p></span>
+      <span><p class="text">Уменьшение глубины / высоты / ширины шкафа - 800р</p></span>
       <span>
         <button name="+ and -" class="decrement" data-price="800"><span class="arrows">-</span></button>
         <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="800"> 
@@ -204,10 +156,7 @@
         <span id="sum"class="item-total">Сумма: 0</span>
       </span>
     </li>
-  </div>
-
   </ul>
-
   <!--<h2>Выбранные товары:</h2>-->
   <div style="display: none;" class="cart"><ul id="cart"></ul></div>
   
