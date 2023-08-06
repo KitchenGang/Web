@@ -5,6 +5,21 @@
 </head>
 
 <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+  width: 100%;
+  max-width: max-content; /* Можете задать максимальную ширину для контейнера */
+  margin: auto; /* Центрирует контейнер по горизонтали */
+  padding: 20px;
+  box-sizing: border-box; /* Учитывает padding и border в ширине элемента */
+}
+
 
   .body {
     user-select: none;
@@ -59,32 +74,34 @@
 
   </style>
 
-<body class="body">
+  <div class="container">
+  
+  <body class="body">
 
   <p><button class="homepage_button" onclick="window.location.href='new_price.html'">назад</button></p>
   
   <h1>Выбранные товары</h1>
   
-<div class="table-container">
-  <table class="styled-table">
-    
-    <thead>
-      <tr>
-        <th>Товар</th>
-        <th>Цена</th>
-        <th>Количество</th>
-        <th>Сумма</th>
-      </tr>
-    </thead>
-    
-    <tbody id="selectedItems">
-    </tbody>
-  </table>
-</div>  
+  <div class="table-container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Товар</th>
+          <th>Цена</th>
+          <th>Количество</th>
+          <th>Сумма</th>
+        </tr>
+      </thead>
+      <tbody id="selectedItems">
+      </tbody>
+    </table>
+  </div>  
   
   <div>
     <p id="totalAmount">ИТОГ: 0</p>
   </div>
+
+</div>
 
   <script>
   
