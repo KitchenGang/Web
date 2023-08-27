@@ -317,6 +317,19 @@
     </div>
     </li>
     <br>
+
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение электрической варочной поверхности - 800р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="800"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="800"> 
+        <button name="+ and -" class="increment" data-price="800"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
     
     <li>
       <div class="block">
@@ -369,7 +382,46 @@
     </div>
     </li>
     <br>
+
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение отдельно стоящего холодильника - 250р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="250"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="250"> 
+        <button name="+ and -" class="increment" data-price="250"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
     
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение встраиваемого холодильника - 990р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="990"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="990"> 
+        <button name="+ and -" class="increment" data-price="990"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
+
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение встроенной посудомоечной машины - 990р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="990"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="990"> 
+        <button name="+ and -" class="increment" data-price="990"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
+
     <li>
       <div class="block">
       <span><p class="text">Установка и подключение встроенной посудомоечной машины - 990р</p></span>
@@ -422,6 +474,58 @@
     </li>
     <br>
 
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение встраиваемой стиральной машины - 990р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="990"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="990"> 
+        <button name="+ and -" class="increment" data-price="990"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
+
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение отдельно стоящей стиральной машины - 990р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="990"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="990"> 
+        <button name="+ and -" class="increment" data-price="990"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+    <li>
+      <div class="block">
+      <span><p class="text">Установка и подключение отдельно стоящей стиральной машины - 200р</p></span>
+      <span>
+        <button name="+ and -" class="decrement" data-price="200"><span class="arrows">-</span></button>
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="0.1"> 
+        <button name="+ and -" class="increment" data-price="200"><span class="arrows">+</span></button>
+        <span id="sum"class="item-total">Сумма: 0</span>
+      </span>
+    </div>
+    </li>
+    <br>
+
+
+
+
+
+
+    
+
   </ul>
   
   <div style="display: none;" class="cart"><ul id="cart"></ul></div>
@@ -435,7 +539,7 @@
 </div>
 
   <script>
-
+/*
     // Функция для обновления общей суммы и списка выбранных товаров
     function updateCart() {
       const cart = document.getElementById("cart");
@@ -470,11 +574,59 @@
       const totalElement = document.getElementById("total");
       totalElement.textContent = `ИТОГ: ${total}`;
     }
+*/
+
+
+
+
+
+    function updateCart() {
+  const cart = document.getElementById("cart");
+  const cartItems = cart.getElementsByTagName("li");
+  let total = 0;
+
+  while (cartItems.length > 0) {
+    cartItems[0].remove();
+  }
+
+  const productList = document.getElementById("productList");
+  const productItems = productList.getElementsByTagName("li");
+
+  for (let i = 0; i < productItems.length; i++) {
+    const quantity = parseFloat(productItems[i].querySelector("input").value);
+    if (!isNaN(quantity) && quantity > 0) {
+      const productName = productItems[i].querySelector("span").textContent;
+      const productPrice = parseFloat(productItems[i].querySelector("input").getAttribute("data-price"));
+      const itemTotal = quantity * productPrice;
+      total += itemTotal;
+
+      productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal.toFixed(1)}`;
+
+      const cartItem = document.createElement("li");
+      cartItem.textContent = `${productName} Количество: ${quantity.toFixed(1)} Сумма: ${itemTotal.toFixed(1)}`;
+      cart.appendChild(cartItem);
+    } else {
+      productItems[i].querySelector(".item-total").textContent = `Сумма: 0`;
+    }
+  }
+
+  const totalElement = document.getElementById("total");
+  totalElement.textContent = `ИТОГ: ${total.toFixed(2)}`;
+}
+
+
+
+
+
+
+
+
+
 
     // Обновляем список выбранных товаров при изменении количества товаров
     const quantityInputs = document.querySelectorAll("input");
     quantityInputs.forEach(input => {
-      input.addEventListener("change", updateCart);
+      input.addEventListener("input", updateCart);
     });
 
     // Добавляем функциональность для кнопок "+" и "-"
