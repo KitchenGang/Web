@@ -511,7 +511,7 @@
       <span><p class="text">Установка и подключение отдельно стоящей стиральной машины - 200р</p></span>
       <span>
         <button name="+ and -" class="decrement" data-price="200"><span class="arrows">-</span></button>
-        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="0.1"> 
+        <input class="quantity" type="number" disabled id="noNumbersInput" min="0" value="0" data-price="0"> 
         <button name="+ and -" class="increment" data-price="200"><span class="arrows">+</span></button>
         <span id="sum"class="item-total">Сумма: 0</span>
       </span>
@@ -600,10 +600,10 @@
       const itemTotal = quantity * productPrice;
       total += itemTotal;
 
-      productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal.toFixed(1)}`;
+      productItems[i].querySelector(".item-total").textContent = `Сумма: ${itemTotal}`;
 
       const cartItem = document.createElement("li");
-      cartItem.textContent = `${productName} Количество: ${quantity.toFixed(1)} Сумма: ${itemTotal.toFixed(1)}`;
+      cartItem.textContent = `${productName} Количество: ${quantity} Сумма: ${itemTotal}`;
       cart.appendChild(cartItem);
     } else {
       productItems[i].querySelector(".item-total").textContent = `Сумма: 0`;
@@ -611,7 +611,7 @@
   }
 
   const totalElement = document.getElementById("total");
-  totalElement.textContent = `ИТОГ: ${total.toFixed(2)}`;
+  totalElement.textContent = `ИТОГ: ${total}`;
 }
 
 
